@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(243, 244, 246);
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 0 auto;
+    z-index: 999;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, .3);
+}
+
+.header .header-title{
+    overflow: hidden;
+    text-overflow: ellipsis; /* ellipsis设置超过的部分为省略号*/
+    display: -webkit-box;        /*  */
+    -webkit-box-orient: vertical;  /* 从顶部向底部垂直布置子元素 */
+    -webkit-line-clamp: 1;   /* 设为最多一行 */
+}
+
+.header .header-title h2 {
+    color: blueviolet;
+    letter-spacing: .1rem;
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.header .btns{
+    display: flex;
+}
+
+.header .btns i {
+    color: rgba(144, 147, 153);
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.header .btns i:hover {
+    background-color: rgba(166, 169, 173, .3);
+}
+
+.header .input-box {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.input-box input {
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: black;
+}
+
+.sliderBar{
+    margin-left: 50px;
+    width: 200px;
+}
+
+.el-input__icon {
+    color: black;
+}
+
+.search-hot {
+    width: 400px;
+    height: 300px;
+    /* border: 1px solid #333; */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-56%, 10%);
+    z-index: 1;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.hot-title {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.hot-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: default;
+}
+
+.hot-item:hover {
+    background-color: seashell;
+}
+
+.hot-index {
+    font-size: 20px;
+    color: rgb(236, 65, 65);
+    margin-right: 15px;
+}
+
+.hot-info {
+    flex: 1;
+    font-size: 12px;
+    color: slategray;
+}
+
+.hot-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.hot-name {
+    font-size: 16px;
+    margin-right: 15px;
+    color: #000;
+}
+
+.hot-icon {
+    width: 30px;
+    /* height: 15px; */
+    margin-left: 5px;
+}
+
+.history-wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.history-item {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.history-item:hover {
+    background-color: #F5F7FA;
+}
+
+.history-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.header .usrInfo-wrap{
+    display: flex;
+}
+
+.header .usrInfo-wrap .usr-wrap{
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+}
+.header .usrInfo-wrap .usr-wrap i{
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.header .usrInfo-wrap .avater{
+    margin-top: 5px;
+    width: 50px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.header .usrInfo-wrap .avater img{
+    width: 100%;
+    border-radius: 2rem;
+}

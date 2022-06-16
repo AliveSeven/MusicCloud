@@ -1,0 +1,143 @@
+.mvs-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 35px 100px;
+}
+
+/* mvs-container中的filter-wrap类中的所有div子元素  */
+.mvs-container .filter-wrap>div {
+  margin-bottom: 30px;
+  vertical-align: baseline;
+  /* 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。  */
+  display: flex;
+  /* 弹性布局,横着放 */
+  align-items: center;
+}
+
+.mvs-container .filter-wrap>div span {
+  font-size: 14px;
+  height: 100%;
+}
+
+.mvs-container .filter-wrap>div span.title {
+  margin: 20px;
+  color: gray;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+
+/* title被active的时候变成黑色 */
+.mvs-container .filter-wrap>div span.title.active {
+  color: black;
+  background-color: #fcf6f5;
+  border-radius: 20px;
+}
+
+/* .mvs-container .filter-wrap > div span.title::before {
+    content: '', pos;
+  } */
+
+
+/* 由竖着变横着 */
+.mvs-container .filter-wrap>div ul {
+  display: flex;
+}
+
+/* 除了最后一个元素外,其他元素在其右边加上一条solid(实心)边框 */
+.mvs-container .filter-wrap>div ul li:not(:last-child) {
+  border-right: 1px solid #f2f2f1;
+}
+
+.mvs-container .mvs .items {
+  display: flex;
+  /* 让items盒子里面的元素横着排,弹性布局 */
+  justify-content: flex-start;
+  /* 从行首起始位置开始排列 */
+  flex-wrap: wrap;
+  /* 让弹性盒元素在必要的时候拆行 */
+}
+
+.mvs-container .mvs .items .item {
+  width: 250px;
+  /* 调整item黑子大小 */
+  cursor: pointer;
+  /* 鼠标经过盒子处变成一只手 */
+  margin-right: 25px;
+  /* 外边距调整 */
+  margin-bottom: 30px;
+}
+
+/* img盒子包款段占满item */
+.mvs-container .mvs .items .item .img-wrap {
+  width: 100%;
+  position: relative;
+}
+
+/* 图片占满盒子 */
+.mvs-container .mvs .items .item .img-wrap img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.mvs-container .mvs .items .item .img-wrap .iconplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 设为居中 */
+  width: 40px;
+  height: 40px;
+  color: #dd6d60;
+  font-size: 20px;
+  /* 文字大小 */
+  border-radius: 50%;
+  /* 描边 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 横轴纵轴居中 */
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+}
+
+/* 透明度变成1 */
+.mvs-container .mvs .items .item .img-wrap:hover .iconplay {
+  opacity: 1;
+}
+
+/* 播放数,绝对定位设置右上角 */
+.mvs-container .mvs .items .item .img-wrap .num-wrap {
+  position: absolute;
+  color: white;
+  top: 0;
+  /* 最上边 */
+  right: 0;
+  /* 最右边 */
+  display: flex;
+  /* 弹性布局 */
+  align-content: center;
+  font-size: 15px;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+
+/* .. */
+.mvs-container .mvs .items .item .img-wrap .num-wrap .icon-play {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+/* MV名字 */
+.mvs-container .mvs .items .item .info-wrap .name {
+  font-size: 15px;
+}
+
+/* 歌手 */
+.mvs-container .mvs .items .item .info-wrap .singer {
+  font-size: 14px;
+  color: darkcyan;
+}

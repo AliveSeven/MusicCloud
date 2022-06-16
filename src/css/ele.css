@@ -1,0 +1,136 @@
+.el-table th>.cell {
+    font-weight: normal;
+    color: black;
+}
+
+.el-table {
+    border-bottom: none;
+    border-collapse: collapse;
+}
+
+.el-table.playlist-table th:nth-child(2) {
+    width: 130px;
+}
+
+.el-table.playlist-table th:nth-child(3) {
+    width: 300px;
+}
+
+.el-table.playlist-table th:nth-child(4) {
+    width: 200px;
+}
+
+.el-table tbody {
+    border-bottom: none;
+}
+
+.el-table td {
+    border-bottom: none;
+    text-align: center;
+}
+
+.el-table td:first-child {
+    padding-left: 10px;
+}
+
+.el-table th {
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+
+.el-table tr:nth-child(2n) {
+    background-color: #fafafa;
+}
+
+.el-table th:first-child {
+    width: 50px;
+}
+
+.el-table th:nth-child(2) {
+    width: 300px;
+}
+
+.el-table th:nth-child(3) {
+    width: 200px;
+}
+
+.el-table .song-wrap>span {
+    margin-top: 20px;
+    display: inline-block;
+    color: #bebebe;
+}
+
+.el-table .song-wrap .icon-mv {
+    padding-left: 5px;
+    color: #ee0000;
+}
+
+.el-table .img-wrap {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.el-table .img-wrap img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.el-table .img-wrap .icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    color: #ee0000;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+}
+
+/* 鼠标经过透明度改为1 */
+.el-table .img-wrap .icon-play:hover {
+    opacity: 1;
+}
+
+.el-table .img-wrap .icon-play::before {
+    transform: translateX(1px);
+}
+
+/* 调整分页块位置 */
+.el-pagination {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* el-table设为透明 */
+.el-table {
+    background-color: transparent !important;
+}
+
+/* el-table__row设为透明 */
+.el-table__row {
+    background-color: transparent !important;
+}
+
+/* !important使该条样式属性声明具有最高优先级 */
+.el-table__row:hover {
+    background-color: #f5f7fa !important;
+}
+
+/* 去除底部白线 */
+.el-table::before { height: 0px !important; } 
+
+/* 返回顶部按钮 */
+.el-backtop {
+	width: 45px !important;
+	height: 45px !important;
+	box-shadow: 0 0 6px rgb(0 0 0 / 24%) !important;
+}
+

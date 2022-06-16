@@ -1,0 +1,308 @@
+.discovery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 35px 100px;
+}
+
+/* 设置轮播框高度 */
+.discovery-container .el-carousel__container {
+    height: 230px;
+}
+
+/* 轮播框里面的图片占满整个框 */
+.discovery-container .el-carousel__item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* title设置一下 */
+.discovery-container .title {
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding-left: 8px;
+}
+
+ /* 推荐歌单布局↓ */
+.discovery-container .recommend {
+    margin-bottom: 40px;
+}
+
+/* 设置歌单集，指定 flex元素多行显示。允许换行， */
+.discovery-container .recommend .items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 单个歌单设置，overflow 定义当一个元素的内容太大而无法适应，hidden设为隐藏太大的部分 */
+.discovery-container .recommend .items .item {
+    width: 200px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 歌单图片设置，宽和高设置一下 */
+.discovery-container .recommend .items .item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+/* 设置那个'热门推荐' ...*/
+.discovery-container .recommend .items .item .desc-wrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-height: 50px; 
+    padding: 5px;
+    overflow: hidden; /* 超过盒子部分隐藏 */
+    text-overflow: ellipsis;  /* 省略号 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical; /*  */
+    -webkit-line-clamp: 2;  /*  */
+    top: -50px;
+}
+
+/* 描述‘热门推荐’文字大小 */
+.discovery-container .recommend .items .item .desc-wrap span {
+    font-size: 14px;
+}
+
+.discovery-container .recommend .items .item:hover .desc-wrap {
+    top: 0;
+}
+
+.discovery-container .recommend .items .item .img-wrap {
+    position: relative;
+    cursor: pointer;
+}
+
+/* 歌单图里面设置一个小圆圈 */
+.discovery-container .recommend .items .item .img-wrap .icon-play {
+    position: absolute;  /* 绝对定位，定死 */
+    right: 10px;
+    bottom: 13px;
+    width: 40px;
+    height: 40px;
+    color: #dd6d60;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex; /* 弹性布局 */
+    align-items: center;   /* 侧轴居中，默认垂直方向 */
+    justify-content: center; /* 主轴居中，默认水平方向 */
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0; /* 透明度为0 */
+}
+/* 鼠标经过歌单图片，圆圈透明度变成100%，就是展示出来，之前不展示的，透明度为0 */
+.discovery-container .recommend .items .item .img-wrap:hover .icon-play {
+    opacity: 1;
+  }
+
+/* 调整歌单名的文字 */
+  .discovery-container .recommend .items .item .name {
+    overflow: hidden;   /*超过的部分隐藏*/
+    text-overflow: ellipsis; /* ellipsis设置超过的部分为省略号*/
+    display: -webkit-box;        /*  */
+    -webkit-box-orient: vertical;  /* 从顶部向底部垂直布置子元素 */
+    -webkit-line-clamp: 1;   /* 设为最多一行 */
+    font-size: 14px;
+  }
+
+  /* 最新音乐的布局↓ */
+
+  .discovery-container .news{
+      margin-bottom: 40px;
+  }
+
+  .discovery-container .news .items{
+      height: 500px;
+      width: 75%;
+      display: flex; /* 弹性布局 */
+      flex-direction: column; /* 向下排  */
+      flex-wrap: wrap; /* 规定灵活的项目在必要的时候拆行或拆列。 */
+      padding-left: 15px; /* 盒子左边加15px */
+  }
+  
+  .discovery-container .news .items .item {
+    height: 100px; /* 设定盒子高度 */
+    width: 45%; /* 设定盒子宽度 */
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* 变成一只手 */
+  }
+
+  /* 鼠标经过改变背景颜色 */
+  .discovery-container .news .items .item:hover {
+    background-color: #f5f5f5;
+  }
+  
+
+   /* 调整图片大小 */
+  .discovery-container .news .items .item .img-wrap img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .discovery-container .news .items .item .img-wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 主轴居中，默认水平居中 */
+  }
+
+  .discovery-container .news .items .item .img-wrap .iconfont{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 实现水平垂直居中 */
+    width: 30px;
+    height: 30px;
+    color: #dd6d60;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0; /* 不透明度为0 */
+  }
+
+  .discovery-container .news .items .item .img-wrap .iconfont::before {
+    transform: translateX(3px);
+  }
+   /* 鼠标经过透明度改为1 */
+  .discovery-container .news .items .item .img-wrap:hover .iconfont {
+    opacity: 1; 
+  }
+
+  
+  .discovery-container .news .items .item .song-wrap {
+    display: flex;
+    flex-direction: column; /* 歌名和歌手名向下排  */
+    justify-content: space-around; /* 均匀排序每个元素，每个元素分配相同的空间，在弹性盒对象的 <div> 元素中的各项周围留有空白 */
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .discovery-container .news .items .item .song-wrap  .song-name{
+    overflow: hidden;   /*超过的部分隐藏*/
+    text-overflow: ellipsis; /* ellipsis设置超过的部分为省略号*/
+    display: -webkit-box;        /*  */
+    -webkit-box-orient: vertical;  /* 从顶部向底部垂直布置子元素 */
+    -webkit-line-clamp: 1;   /* 设为最多一行 */
+  }
+  
+  /* 歌手名字字体颜色和大小改一下 */
+  .discovery-container .news .items .item .song-wrap .singer {
+    font-size: 14px;
+    color: darkcyan;
+    overflow: hidden;   /*超过的部分隐藏*/
+    text-overflow: ellipsis; /* ellipsis设置超过的部分为省略号*/
+    display: -webkit-box;        /*  */
+    -webkit-line-clamp: 1;   /* 设为最多一行 */
+    -webkit-box-orient: vertical;  /* 从顶部向底部垂直布置子元素 */
+  }
+
+  .discovery-container .mvs{
+    padding-bottom: 80px;
+  }
+  
+  /*设置为flex布局，组件水平放置*/
+  .discovery-container .mvs .items{
+      display: flex;
+      flex-wrap: wrap;
+      /* 均匀排序每个元素，每个元素分配相同的空间，在弹性盒对象的 <div> 元素中的各项周围留有空白 */
+      /* justify-content: space-around; */
+  }
+
+
+  /* 设置MV展示的盒子的宽度 */
+  .discovery-container .mvs .items .item{
+      width: 250px;
+      height: 250px;
+      cursor: pointer;
+      margin-right: 25px;
+  }
+
+   /* 设置相对定位，可以配合top、left、bottom、right元素设置其他元素的定位 */
+  .discovery-container .mvs .items .item .img-wrap {
+    width: 250px;
+    height: 180px;
+    position: relative;
+  }
+
+  /* 设置图片宽度占满盒子 */
+  .discovery-container .mvs .items .item .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, .3);
+  }
+  
+  .discovery-container .mvs .items .item .img-wrap .icon1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    color: #ee0000;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+  }
+
+  .discovery-container .mvs .items .item .img-wrap:hover .icon1{
+    opacity: 1;
+  }
+
+  /* “>”是指子代元素,是CSS3特有的选择器,“父元素>子元素”表示选择父元素的所有子元素 */
+  /* 播放数 */
+  .discovery-container .mvs .items .item .img-wrap .num-wrap {
+    position: absolute;
+    color: white;
+    top: 0;  /* 设置在最顶部 */
+    right: 0;  /* 设置在最左边 */
+    display: flex;
+    align-content: center;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-top: 2px;
+  }
+
+  .discovery-container .mvs .items .item .img-wrap .num-wrap .icon2{
+    margin-right: 5px;
+  }
+  
+  .discovery-container .mvs .items .item .img-wrap .num-wrap .num{
+    margin-top: 2px;
+  }
+
+  /* MV名字 */
+  .discovery-container .mvs .items .item .info-wrap .name {
+    font-size: 15px;
+    margin: 5px auto;
+  } 
+
+  /* 歌手名字设置一下 */
+  .discovery-container .mvs .items .item .info-wrap .singer {
+    font-size: 14px;
+    /* color: #c5c5c5; */
+    color: darkcyan;
+  }
+
+
+
+  
+
+

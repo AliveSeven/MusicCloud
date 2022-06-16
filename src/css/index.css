@@ -1,0 +1,143 @@
+body,
+html {
+  height: 100%; /* 高度设定 */
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  overflow: hidden;
+  /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  /* 字体设定 */
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+ Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
+
+}
+/* ::before和::after匹配一个虚拟元素，主要被用于为当前元素增加装饰性内容的。他显示的内容是其自身的“content”属性，默认是内联元素。 */
+/* ::before或::after都必须和content属性结合使用，content不能没有，内容至少为空 */
+body::after{
+  content: '';
+  background-image: url('https://tva4.sinaimg.cn/mw1024/ec43126fgy1gwjqvksjruj21k410pe81.jpg');
+  background-size: cover;
+  opacity: 0.25;
+  top: 0;
+  left: 80px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* 全体过渡设为0.5s */
+  transition: 0.5s;
+}
+
+a {
+    /* 消去下划线 */
+  text-decoration: none;
+}
+
+#app {
+    height: 100%;
+}
+  
+ul,
+ol {
+    /* 消去ol和ul左边的那个圆圈的东西或者是序列 */
+  list-style: none;
+}
+
+
+.iconfont {
+    /* 悬浮于连接上时，通常为手 */
+  cursor: pointer;
+}
+
+.index-contain{
+    /* 弹性布局，把里面的盒子变成水平放置 */
+    display: flex;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.index-contain .main{
+    flex: 1;
+    overflow-y: scroll;
+    padding: 10px 20px;
+    z-index: 1;
+    margin-bottom: 70px;
+}
+
+.index-contain .player {
+    background: #f1f3f4;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .index-contain .audioplayer {
+    width: 100%;
+    border-radius: none;
+    outline: none;
+  }
+  
+.nav{
+    min-width: 80px;
+    /* 高度铺满 */
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    background-color: rgb(243, 244, 246);
+    /* border-radius: 10px; */
+    transition: .3s;
+    overflow: hidden;
+}
+
+.nav-list{
+    display: block;
+    height: 8%;
+    width: 85%;
+    margin: 9px;
+    position: relative;
+    transition: .3s;
+    color: #000;
+}
+
+.nav-list i{
+    font-size: 30px;
+    position: absolute;
+    margin: 7px 0 0 13px;
+}
+
+.nav-list span{
+    position: relative;
+    top: 10px;
+    left: 60px;
+    font: 500 20px '';
+    /* 设置透明度为0 */
+    opacity: 0;
+    transition: .1s;
+}
+
+.nav:hover{
+    min-width: 210px;
+}
+
+.nav-list:hover{
+    background-color: rgb(209, 213, 219);
+}
+
+.nav:hover span{
+    opacity: 1;
+}
+
+.nav-list:hover{
+    color: #000;
+}
+

@@ -1,0 +1,205 @@
+/* 调整最外边的盒子的长宽，外边距 */
+.playlist-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 35px 100px;
+}
+
+.playlist-container .top-wrap {
+  display: flex;
+}
+
+.playlist-container .top-wrap span {
+  font-size: 16px;
+}
+
+.playlist-container .top-wrap .img-wrap {
+  margin-right: 30px;
+}
+
+/* 封面大小 */
+.playlist-container .top-wrap .img-wrap img {
+  width: 230px;
+  height: 230px;
+}
+
+.playlist-container .top-wrap .info-wrap p {
+  font-size: 25px;
+}
+
+.playlist-container .top-wrap .info-wrap .title {
+  margin-bottom: 20px;
+}
+
+/* 作者信息弹性布局 */
+.playlist-container .top-wrap .info-wrap .author-wrap {
+  display: flex;
+  align-items: center;
+  /* 侧轴子元素居中 */
+  margin-bottom: 20px;
+}
+
+/* 作者头像大小改一下 */
+.playlist-container .top-wrap .info-wrap .author-wrap img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.playlist-container .top-wrap .info-wrap .author-wrap .name {
+  margin: 0 5px;
+}
+
+.playlist-container .top-wrap .info-wrap .author-wrap .time {
+  font-size: 14px;
+}
+
+/* 播放全部 */
+.playlist-container .top-wrap .info-wrap .play-wrap {
+  width: 130px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+  /* 从左侧开始的线性渐变，颜色变化由#e85e4d到#c6483c */
+  background: linear-gradient(to right, #e85e4d, #c6483c);
+  display: flex;
+  align-items: center;
+  /* 侧轴居中 */
+  justify-content: space-around;
+  /* 在弹性盒对象的 <div> 元素中的各项周围留有空白：    */
+  margin-bottom: 25px;
+}
+
+.playlist-container .top-wrap .info-wrap .play-wrap span {
+  color: white;
+}
+
+.play-wrap {
+  user-select: none;
+  /* 文字不给被选中 */
+}
+
+.playlist-container .top-wrap .info-wrap .play-wrap span.iconfont {
+  margin-right: 8px;
+}
+
+.playlist-container .top-wrap .info-wrap .play-wrap span.text {
+  font-size: 16px;
+}
+
+.playlist-container .top-wrap .info-wrap .tag-wrap {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.playlist-container .top-wrap .info-wrap .tag-wrap span {
+  margin: 0;
+}
+
+.playlist-container .top-wrap .info-wrap .tag-wrap ul {
+  display: flex;
+  align-items: center;
+}
+
+.playlist-container .top-wrap .info-wrap .tag-wrap li {
+  font-size: 15px;
+}
+
+.playlist-container .top-wrap .info-wrap .tag-wrap li:not(:last-child)::after {
+  content: '/';
+  margin: 0 4px;
+}
+
+/* span最后的一个子元素 */
+.playlist-container .top-wrap .info-wrap .desc-wrap span:last-child {
+  font-size: 15px;
+}
+
+/* span第一个子元素 */
+.playlist-container .top-wrap .info-wrap span:first-child {
+  margin-right: 10px;
+}
+
+.playlist-container .comment-wrap {
+  margin-bottom: 70px;
+}
+
+.playlist-container .comment-wrap .title {
+  font-size: 20px;
+}
+
+.playlist-container .comment-wrap .number {
+  color: black;
+  font-size: 18px;
+}
+
+.playlist-container .comment-wrap .item {
+  display: flex;
+  padding-top: 20px;
+}
+
+.playlist-container .comment-wrap .item .icon-wrap {
+  margin-right: 15px;
+}
+
+.playlist-container .comment-wrap .item .icon-wrap img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.playlist-container .comment-wrap .item:not(:last-child) .content-wrap {
+  border-bottom: 1px solid #f2f2f1;
+}
+
+.playlist-container .comment-wrap .item .date {
+  color: #bebebe;
+  font-size: 14px;
+}
+
+.playlist-container .comment-wrap .item .content-wrap {
+  padding-bottom: 20px;
+  flex: 1;
+}
+
+/* 评论人的名字变成蓝色 */
+.playlist-container .comment-wrap .item .content-wrap .name {
+  color: #517eaf;
+  font-size: 14px;
+}
+
+/* 评论文字大小 */
+.playlist-container .comment-wrap .item .content-wrap .comment {
+  font-size: 14px;
+}
+
+.playlist-container .comment-wrap .item .content-wrap .content,
+.playlist-container .comment-wrap .item .content-wrap .re-content {
+  margin-bottom: 10px;
+}
+
+.playlist-container .comment-wrap .item .content-wrap .re-content {
+  padding: 10px;
+  background-color: #e6e5e6;
+  border-radius: 5px;
+}
+
+.icon-zan {
+  color: grey;
+  /* 元素右浮动 */
+  float: right;
+}
+
+.add-music {
+  color: #ee0000;
+  margin-left: 4px;
+}
+
+.playlist-container .playlist-table{
+  user-select: none;
+  /* 文字不给被选中 */
+  margin-bottom: 100px;
+}
+

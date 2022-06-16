@@ -1,0 +1,77 @@
+.artist-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 35px 50px;
+}
+
+.artist-container .artist-wrap{
+    display: flex;
+}
+
+.artist-container .artist-wrap .img-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.artist-container .artist-wrap .img-wrap img{
+    width: 230px;
+    height: 230px;
+}
+
+.artist-container .artist-wrap .artist-info > div{
+    margin-top: 20px;
+}
+
+.artist-info .author-wrap .alias-wrap{
+    display: flex;
+    margin-top: 10px;
+}
+
+.artist-info .author-wrap .alias-wrap span:not(:last-child){
+    margin-right: 10px;
+}
+.artist-info .creation-wrap span:not(:last-child){
+    margin-right: 10px;
+}
+
+.artist-info .desc-wrap p{
+    font-size: 15px;
+    color:darkslategray;
+    /* 调整一下字间距 */
+    letter-spacing : 1px;
+}
+
+.artist-container .el-table__row{
+    height: 50px;
+}
+
+.artist-container .name-wrap{
+    font-size: 15px;
+    width: 75%;
+}
+
+.artist-container .name-wrap .first-title{
+    text-align: left;
+}
+
+
+.artist-container .el-table .song-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-container .el-table .song-wrap .second-title{
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-box-orient : vertical;
+    -webkit-line-clamp: 1; /*  最多1行 */
+    text-overflow: ellipsis;  /* 多余的文字显示为省略号 */
+    font-size: 5px;
+    color: #888482;
+    text-align: left;
+}
