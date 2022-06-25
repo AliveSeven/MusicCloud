@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
   publicPath: process.env.NODE_ENV === 'production'
-  ? 'My-Music-Cloud'//这里写展示页面的仓库名称
+  ? ''//这里写展示页面的仓库名称
   : '/',
   // 跨域问题解决
   devServer: {
