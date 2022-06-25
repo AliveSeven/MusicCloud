@@ -68,7 +68,7 @@ export default {
             // 输入验证码
             verification:'',
             // 左边图片
-            pic:'https://static.aichat.net/chat/202205/2090b12d-584f-4a39-9523-b774eb1710aa.jpg',
+            pic:'https://www.xdocin.com/xdoc?_key=4usklvd325aqbbzk2tcofoquoe&_func=down&_dir=login.jpg',
             // 加载
             // loading : true
             // 用户信息

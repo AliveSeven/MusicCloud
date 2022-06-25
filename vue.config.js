@@ -2,6 +2,9 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
+  publicPath: process.env.NODE_ENV === 'production'
+  ? 'My-Music-Cloud'//这里写展示页面的仓库名称
+  : '/',
   // 跨域问题解决
   devServer: {
     // 配置代理
@@ -19,3 +22,6 @@ module.exports = defineConfig({
     }
   }
 })
+// publicPath: process.env.NODE_ENV === 'production'
+// ? '/My-Music-Cloud/'//这里写展示页面的仓库名称
+// : '/',

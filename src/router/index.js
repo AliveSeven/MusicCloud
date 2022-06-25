@@ -12,6 +12,7 @@ VueRouter.prototype.push = function push(location) {
 }
 //创建路由
 const router = new VueRouter({
+  mode: 'hash',
   routes: [
     // 默认跳转到发现音乐页面
     {

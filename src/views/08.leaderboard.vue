@@ -41,7 +41,7 @@ export default {
         // 获取排行榜详细,跳转到歌单详情处
         toPlaylist(id){
             // 跳转并携带数据即可
-            console.log('排行榜歌单',id)
+            // console.log('排行榜歌单',id)
             this.$router.push(`/playlist?q=${id}`);
         }
     },
