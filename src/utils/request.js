@@ -8,10 +8,11 @@ import NProgress from 'nprogress'
 // let baseURL = "http://124.223.89.194:3000/"
 // let baseURL = "http://localhost:3000"
 // let baseURL = "https://lianghj.top:3000"
+// let baseURL = 'http://duoduozuikeail.top:3000'
 
 // if(process.env.NODE_ENV == "development"){
 // }else{
-let baseURL = 'http://duoduozuikeail.top:3000'
+let baseURL = 'https://lianghj.top:3000'
 // }
 
 const service = axios.create({

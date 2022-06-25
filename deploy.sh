@@ -1,26 +1,13 @@
-#!/usr/bin/env sh
+git add .
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/AliveLeqi/My-Music-Cloud.git
+
+git push -u origin master
+
+git config --global --unset http.proxy
  
-# abort on errors
-set -e
- 
-# build
-npm run build
- 
-# navigate into the build output directory
-cd dist
- 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
- 
-git init
-git add -A
-git commit -m 'deploy'
-git pust -f https://github.com/AliveLeqi/My-Music-Cloud.git
- 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
- 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
- 
-cd -
+git config --global --unset https.proxy
+
+git config --global http.sslVerify "false"
