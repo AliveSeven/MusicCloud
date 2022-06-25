@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true,
-  lintOnSave: false,
+  transpileDependencies: true, 
+  lintOnSave: false,  // 关闭eslint
   publicPath: process.env.NODE_ENV === 'production'
   ? ''//这里写展示页面的仓库名称
   : '/',
