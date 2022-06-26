@@ -16,9 +16,10 @@ html {
 /* ::before或::after都必须和content属性结合使用，content不能没有，内容至少为空 */
 body::after{
   content: '';
-  background-image: url('https://tva4.sinaimg.cn/mw1024/ec43126fgy1gwjqvksjruj21k410pe81.jpg');
+  /* background-image: url('https://tva4.sinaimg.cn/mw1024/ec43126fgy1gwjqvksjruj21k410pe81.jpg'); */
+  background-image: url("https://cdn.jsdelivr.net/gh/AliveLeqi/WebsiteMaking@v1.04/Personal/99116956_p0.png");
   background-size: cover;
-  opacity: 0.25;
+  opacity: 0.35;
   top: 0;
   left: 80px;
   bottom: 0;

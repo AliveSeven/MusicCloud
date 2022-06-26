@@ -397,7 +397,7 @@ export default {
     },
 
     // 切歌
-    toggleSong(type) {
+    toggleSong(type) {  
       // 判断播放列表不为空和只有一首歌时
       if (this.playingList.length == 0) {
         this.$message({
