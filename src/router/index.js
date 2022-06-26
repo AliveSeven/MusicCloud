@@ -24,67 +24,67 @@ const router = new VueRouter({
       //地址
       path:"/discovery",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/01.discovery.vue'),
+      component: () => import('@/views/pc/01.discovery.vue'),
     },
     {
       //地址
       path:"/playlists",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/02.playlists.vue'),
+      component: () => import('@/views/pc/02.playlists.vue'),
     },
     {
       //地址
       path:"/songs",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/03.songs.vue'),
+      component: () => import('@/views/pc/03.songs.vue'),
     },
     {
       //地址
       path:"/mvs",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/04.mvs.vue'),
+      component: () => import('@/views/pc/04.mvs.vue'),
     },
     {
       //地址
       path:"/result",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/05.result.vue'),
+      component: () => import('@/views/pc/05.result.vue'),
     },
     {
       //地址
       path:"/playlist",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/06.playlist.vue'),
+      component: () => import('@/views/pc/06.playlist.vue'),
     },
     {
       //地址
       path:"/mv",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/07.mv.vue'),
+      component: () => import('@/views/pc/07.mv.vue'),
     },
     {
       //地址
       path:"/leaderboard",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/08.leaderboard.vue'),
+      component: () => import('@/views/pc/08.leaderboard.vue'),
     },
     {
       //地址
       path:"/artists",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/09.artists.vue'),
+      component: () => import('@/views/pc/09.artists.vue'),
     },
     {
       //地址
       path:"/artist",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/10.artist.vue'),
+      component: () => import('@/views/pc/10.artist.vue'),
     },
     {
       //地址
       path:"/login",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/11.login.vue'),
+      component: () => import('@/views/pc/11.login.vue'),
     },
   ],
 

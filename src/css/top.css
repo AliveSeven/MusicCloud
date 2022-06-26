@@ -33,6 +33,7 @@
 
 .header .btns{
     display: flex;
+    margin-left: 10px;
 }
 
 .header .btns i {
@@ -49,7 +50,7 @@
 
 .header .input-box {
     width: 400px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .input-box input {
@@ -77,13 +78,11 @@
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
     border-radius: 10px;
     background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-56%, 10%);
     z-index: 1;
     padding: 10px 10px;
     box-sizing: border-box;
+    position: absolute;
+    margin-left: 30px;
 }
 
 .hot-title {
@@ -173,19 +172,64 @@
     justify-content: center;
     color: blueviolet;
 }
+
 .header .usrInfo-wrap .usr-wrap i{
     margin-left: 5px;
     font-size: 20px;
 }
 
 .header .usrInfo-wrap .avater{
-    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
+    height: 50px;
     cursor: pointer;
     margin-left: 50px;
+    background: #f6f6f6;
+    color: #00AEEC;
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
 .header .usrInfo-wrap .avater img{
     width: 100%;
     border-radius: 2rem;
+}
+
+@media screen and (max-width : 980px) {
+    .sliderBar{
+        display: none;
+    }
+
+    .header .input-box {
+        width: 300px;
+        margin-left: 30px;
+    }
+    .search-hot {
+        width: 300px;
+        height: 300px;
+        /* border: 1px solid #333; */
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+        border-radius: 10px;
+        background-color: #fff;
+        z-index: 1;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        position: absolute;
+        margin-left: 30px;
+    }
+
+    #btbg{
+        display: none;
+    }
+
+    .header-title{
+        display: none;
+    }
+  
+}
+
+@media screen and (max-width : 600px) {
+    
 }

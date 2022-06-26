@@ -6,28 +6,28 @@
       <li class="nav-list">
         <i class="el-icon-headset"></i>
         <router-link to="/discovery">
-          <span>发现音乐</span>
+          <span class="nav-router">发现音乐</span>
         </router-link>
       </li>
       <li class="nav-list">
         <i class="el-icon-trophy"></i>
-        <router-link to="/playlists"> <span>推荐歌单</span> </router-link>
+        <router-link to="/playlists"> <span class="nav-router">推荐歌单</span> </router-link>
       </li>
       <li class="nav-list">
         <i class="el-icon-star-off"></i>
-        <router-link to="/songs"> <span>最新音乐</span> </router-link>
+        <router-link to="/songs"> <span class="nav-router">最新音乐</span> </router-link>
       </li>
       <li class="nav-list">
         <i class="el-icon-film"></i>
-        <router-link to="/mvs"> <span>最新MV</span> </router-link>
+        <router-link to="/mvs"> <span class="nav-router">最新MV</span> </router-link>
       </li>
       <li class="nav-list">
         <i class="el-icon-s-data"></i>
-        <router-link to="/leaderboard"> <span>排行榜</span> </router-link>
+        <router-link to="/leaderboard"> <span class="nav-router">排行榜</span> </router-link>
       </li>
       <li class="nav-list">
         <i class="el-icon-mic"></i>
-        <router-link to="/artists"> <span>歌手</span> </router-link>
+        <router-link to="/artists"> <span class="nav-router">歌手</span> </router-link>
       </li>
     </div>
 
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import discovery from "@/views/01.discovery.vue";
+import discovery from "@/views/pc/01.discovery.vue";
 import FloatLyric from '@/components/content/FloatLyric'
 import { mapGetters } from "vuex";
 

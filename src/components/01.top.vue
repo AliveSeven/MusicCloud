@@ -12,122 +12,127 @@
       <!-- 点击前进 -->
       <i class="el-icon-arrow-right" @click="go(1)"></i>
       <!-- 点击改变背景 -->
-      <i class="el-icon-picture-outline" @click="changeBg()"></i>
+      <i class="el-icon-picture-outline" id="btbg" @click="changeBg()"></i>
     </div>
-    <!-- 输入搜索框 -->
-    <div class="input-box">
-      <el-input
-        v-model="searchValue"
-        :placeholder="placeholder"
-        prefix-icon="el-icon-search"
-        @keyup.enter.native="search"
-        @focus="getSearchData"
-        @blur="outblur"
-      >
-      </el-input>
+
+    <div>
+      <!-- 输入搜索框 -->
+      <div class="input-box">
+        <el-input
+          v-model="searchValue"
+          :placeholder="placeholder"
+          prefix-icon="el-icon-search"
+          @keyup.enter.native="search"
+          @focus="getSearchData"
+          @blur="outblur"
+        >
+        </el-input>
+      </div>
+      <!-- 热搜框，聚焦于搜索框的时候弹出来 -->
+      <!-- @mousedown.event.preventDefault();，可以防止触发blur函数，即可以不让热搜榜或者是搜索建议榜消失 -->
+      <transition name="el-fade-in-linear">
+        <div class="search-hot" v-show="showHot" ref="hot">
+          <!-- 在 element-UI 中有一个隐藏组件 <el-scrollbar>，这个组件的滚动条还是很不错的，比原生的滚动条好看，而且还有一些效果（鼠标移入时显示，移出时隐藏）。 -->
+          <el-scrollbar style="height: 100%">
+            <div class="history" v-if="history.length">
+              <span
+                class="hot-title"
+                style="display: inline-block; margin-right: 5px"
+                >搜索历史</span
+              >
+              <span
+                class="iconfont icon-lajitong"
+                style="cursor: pointer"
+                title="清空搜索历史"
+                @mousedown="deleteHistory(0, true)"
+              ></span>
+              <div class="history-wrap">
+                <div
+                  class="history-item"
+                  v-for="(item, index) in history"
+                  :key="index"
+                  @mousedown="toHot(item)"
+                >
+                  {{ item }}
+                  <span
+                    class="delete-btn"
+                    title="删除"
+                    @mousedown.stop="deleteHistory(index, false)"
+                    >×</span
+                  >
+                </div>
+              </div>
+            </div>
+    
+            <div class="hot-title">热搜榜</div>
+            <ul>
+              <li
+                class="hot-item"
+                v-for="(item, index) in hotData"
+                :key="index"
+                @mousedown="toHot(item.searchWord)"
+              >
+                <!-- 歌曲序列 -->
+                <div class="hot-index">{{ index + 1 }}</div>
+                <!-- 热搜信息 -->
+                <div class="hot-info">
+                  <div class="hot-top">
+                    <!-- 热搜数据的名字 -->
+                    <div class="hot-name">{{ item.searchWord }}</div>
+                    <div class="hot-score">{{ item.score }}</div>
+                    <img
+                      class="hot-icon"
+                      v-show="item.iconUrl && item.iconType != 5"
+                      :src="item.iconUrl"
+                    />
+                  </div>
+                  <div class="hot-content">{{ item.content }}</div>
+                </div>
+              </li>
+            </ul>
+          </el-scrollbar>
+        </div>
+      </transition>
+
+      <transition name="el-fade-in-linear">
+        <div class="search-hot" v-show="isAdvice" >
+          <el-scrollbar style="height: 100%">
+            <ul>
+              <li
+                class="hot-item"
+                v-for="(item, index) in suggestionList.songs"
+                :key="index"
+                @mousedown="toHot(item.name)"
+              >
+                <!-- 热搜信息 -->
+                <div class="hot-info">
+                  <div class="hot-top">
+                    <!-- 热搜数据的名字 -->
+                    <div class="hot-name">{{ item.name }}</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </el-scrollbar>
+        </div>
+      </transition>
     </div>
+ 
     <div class="sliderBar">
       <el-slider v-model="sliderValue" :format-tooltip="formatTooltip" ></el-slider>
     </div>
 
     <div class="usrInfo-wrap">
       <div class="avater">
-        <img :src="usrInfo.avater" @click="toLogin()">
+        <span @click="toLogin()">登录</span>
+        <!-- <img :src="usrInfo.avater" @click="toLogin()"> -->
       </div>
       <div class="usr-wrap">
         <span>{{ usrInfo.usrname }}</span>
         <i class="el-icon-caret-bottom"></i>
       </div>
     </div>
-
-    <!-- 热搜框，聚焦于搜索框的时候弹出来 -->
-    <!-- @mousedown.event.preventDefault();，可以防止触发blur函数，即可以不让热搜榜或者是搜索建议榜消失 -->
-    <transition name="el-fade-in-linear">
-      <div class="search-hot" v-show="showHot" ref="hot">
-        <!-- 在 element-UI 中有一个隐藏组件 <el-scrollbar>，这个组件的滚动条还是很不错的，比原生的滚动条好看，而且还有一些效果（鼠标移入时显示，移出时隐藏）。 -->
-        <el-scrollbar style="height: 100%">
-          <div class="history" v-if="history.length">
-            <span
-              class="hot-title"
-              style="display: inline-block; margin-right: 5px"
-              >搜索历史</span
-            >
-            <span
-              class="iconfont icon-lajitong"
-              style="cursor: pointer"
-              title="清空搜索历史"
-              @mousedown="deleteHistory(0, true)"
-            ></span>
-            <div class="history-wrap">
-              <div
-                class="history-item"
-                v-for="(item, index) in history"
-                :key="index"
-                @mousedown="toHot(item)"
-              >
-                {{ item }}
-                <span
-                  class="delete-btn"
-                  title="删除"
-                  @mousedown.stop="deleteHistory(index, false)"
-                  >×</span
-                >
-              </div>
-            </div>
-          </div>
   
-          <div class="hot-title">热搜榜</div>
-          <ul>
-            <li
-              class="hot-item"
-              v-for="(item, index) in hotData"
-              :key="index"
-              @mousedown="toHot(item.searchWord)"
-            >
-              <!-- 歌曲序列 -->
-              <div class="hot-index">{{ index + 1 }}</div>
-              <!-- 热搜信息 -->
-              <div class="hot-info">
-                <div class="hot-top">
-                  <!-- 热搜数据的名字 -->
-                  <div class="hot-name">{{ item.searchWord }}</div>
-                  <div class="hot-score">{{ item.score }}</div>
-                  <img
-                    class="hot-icon"
-                    v-show="item.iconUrl && item.iconType != 5"
-                    :src="item.iconUrl"
-                  />
-                </div>
-                <div class="hot-content">{{ item.content }}</div>
-              </div>
-            </li>
-          </ul>
-        </el-scrollbar>
-      </div>
-    </transition>
-
-    <transition name="el-fade-in-linear">
-      <div class="search-hot" v-show="isAdvice" >
-        <el-scrollbar style="height: 100%">
-          <ul>
-            <li
-              class="hot-item"
-              v-for="(item, index) in suggestionList.songs"
-              :key="index"
-              @mousedown="toHot(item.name)"
-            >
-              <!-- 热搜信息 -->
-              <div class="hot-info">
-                <div class="hot-top">
-                  <!-- 热搜数据的名字 -->
-                  <div class="hot-name">{{ item.name }}</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </el-scrollbar>
-      </div>
-    </transition>
   </div>
 </template>
 
