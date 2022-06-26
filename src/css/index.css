@@ -123,21 +123,20 @@ ol {
     position: relative;
     top: 10px;
     left: 60px;
-    font: 500 20px '';
+    font-size: 20px;
     /* 设置透明度为0 */
     opacity: 0;
     transition: .1s;
 }
 
-.nav-list .nav-router{
+/* .nav-list .nav-router{
   position: relative;
   top: 10px;
   left: 60px;
   font: 500 20px '';
-  /* 设置透明度为0 */
   opacity: 0;
   transition: .1s;
-}
+} */
 
 .nav:hover{
     min-width: 210px;

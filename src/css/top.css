@@ -228,7 +228,7 @@
 }
 
 @media screen and (max-width : 450px) {
-    
+
     .header .header-title{
         display: none;
     }
@@ -239,7 +239,38 @@
     }
 
     .search-hot {
+        width: 200px;
+        height: 300px;
+        /* border: 1px solid #333; */
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+        border-radius: 10px;
+        background-color: #fff;
+        z-index: 1;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        position: absolute;
+        margin-left: 10px;
+    }
+
+    .hot-index {
+        font-size: 12px;
+        color: rgb(236, 65, 65);
+        margin-right: 15px;
+    }
+
+    .hot-name {
+        font-size: 10px;
+        margin-right: 15px;
+        color: #000;
+        width: 100px;
+    }
+    
+    .hot-score{
         display: none;
+    }
+
+    .hot-content{
+        font-size: 8px;
     }
 
     .header .usrInfo-wrap .avater{
