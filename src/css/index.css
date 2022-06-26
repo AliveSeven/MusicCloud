@@ -71,6 +71,10 @@ ol {
     margin-bottom: 70px;
 }
 
+.index-contain .main .container{
+  min-width: 1280px;
+}
+
 .index-contain .player {
     background: #f1f3f4;
     position: fixed;

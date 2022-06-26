@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 15%;
+    min-width: 15%;
     margin-left: 15px;
 }
 
@@ -62,13 +62,6 @@
     font-size: 22px;
     font-weight: 700;
 }
-
-
-/* .foot-container .player .left-cover-content .cover-content .cover .mask-playicon .icon-xiangshangjiantou,.icon-down-arrow {
-    font-size: 22px;
-    color: #fff;
-    font-weight: 700;
-} */
 
 .cover-content .cover .icon-yinleyanzou {
     font-size: 34px;
@@ -173,6 +166,10 @@
     margin: auto 10px;
 }
 
+.foot-container .player .right-voice .songplaylist{
+    margin-right: 10px;
+}
+
 /*  播放列表动画 */
 .playlist-enter,
 .playlist-leave-to {
@@ -185,3 +182,92 @@
 .playlist-enter-to {
 	transform: translateX(0);
 }
+
+@media screen and (max-width : 800px) {
+
+    
+    .foot-container .player .left-cover-content .cover-content .songname p {
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+    }
+
+    .foot-container .player .left-cover-content .cover-content .like-song{
+        display: none;
+    }
+
+    .foot-container .player .left-cover-content .cover-content .download{
+        display: none;
+    }
+
+    .foot-container .player .center-play-song .playmodel{
+        display: none;
+    }
+
+    .foot-container .player .center-play-song{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        width: 55%;
+    }
+
+}
+
+@media screen and (max-width : 500px) {
+
+    .foot-container .player .center-play-song .song-progress{
+        display: none;
+    }
+
+    /* .foot-container .player .right-voice{
+        display: none;
+    } */
+
+    .foot-container .player .center-play-song .change-play{
+        margin: 10px;
+    }
+
+    .foot-container .player .center-play-song .playmodel{
+        display: none;
+    }
+
+    .foot-container .player .center-play-song{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        width: 40%;
+    }
+
+    .foot-container .player .left-cover-content .cover-content .like-song{
+        display: none;
+    }
+
+    .foot-container .player .left-cover-content .cover-content .download{
+        display: none;
+    }
+
+    .foot-container .player .right-voice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+    }
+
+}
+
+@media screen and (max-width : 450px){
+
+    .foot-container .player .left-cover-content .cover-content .songname p {
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+    }
+
+} 
+

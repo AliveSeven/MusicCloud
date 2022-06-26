@@ -20,3 +20,15 @@ export default {
   
 }
 </script>
+
+<style>
+  .nav-list span{
+    position: relative;
+    top: 10px;
+    left: 60px;
+    font: 500 20px '';
+    /* 设置透明度为0 */
+    opacity: 0;
+    transition: .1s;
+  }
+</style>

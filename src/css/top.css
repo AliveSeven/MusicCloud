@@ -63,7 +63,7 @@
 }
 
 .sliderBar{
-    margin-left: 50px;
+    margin-left: 30px;
     width: 200px;
 }
 
@@ -185,7 +185,7 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
-    margin-left: 50px;
+    margin-left: 30px;
     background: #f6f6f6;
     color: #00AEEC;
     border: 1px solid white;
@@ -206,6 +206,7 @@
         width: 300px;
         margin-left: 30px;
     }
+
     .search-hot {
         width: 300px;
         height: 300px;
@@ -223,13 +224,29 @@
     #btbg{
         display: none;
     }
-
-    .header-title{
-        display: none;
-    }
   
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 450px) {
     
+    .header .header-title{
+        display: none;
+    }
+
+    .header .input-box {
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .search-hot {
+        display: none;
+    }
+
+    .header .usrInfo-wrap .avater{
+        margin-left: 10px;
+    }
+
+    .header .usrInfo-wrap .usr-wrap{
+        display: none;
+    }
 }

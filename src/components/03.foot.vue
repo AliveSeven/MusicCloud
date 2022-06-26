@@ -167,13 +167,15 @@
             :isActiveBar="false"
           />
         </div>
-        <!-- 播放列表按钮 -->
-        <el-tooltip effect="dark" content="播放列表" placement="top">
-          <span
-            class="iconfont icon-songplaylist"
-            @click="isShowDrawer = !isShowDrawer"
-          ></span>
-        </el-tooltip>
+        <div class="songplaylist">
+          <!-- 播放列表按钮 -->
+          <el-tooltip effect="dark" content="播放列表" placement="top">
+            <span
+              class="iconfont icon-songplaylist"
+              @click="isShowDrawer = !isShowDrawer"
+            ></span>
+          </el-tooltip>
+        </div>
       </div>
       <!-- 当前播放列表 -->
 			<transition name="playlist">
