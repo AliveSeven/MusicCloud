@@ -10,16 +10,14 @@ import NProgress from 'nprogress'
 // let baseURL = "https://lianghj.top:3000"
 // let baseURL = 'http://duoduozuikeail.top:3000'
 
-// if(process.env.NODE_ENV == "development"){
-// }else{
+
 let baseURL = 'https://lianghj.top:3000'
-// let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
-// }
 
 const service = axios.create({
     baseURL,
     timeout: 5000,
     changeOrigin: true,  //跨域
+    withCredentials: true, //axios 设置请求自动携带cookie
 })
 
 // 添加请求拦截器

@@ -57,7 +57,6 @@ export function getLikSongList(uid){
         params:{
             uid,
             timestamp:Date.parse(new Date())
-            
         }
     })
 }

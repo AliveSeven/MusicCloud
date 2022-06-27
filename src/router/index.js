@@ -86,6 +86,12 @@ const router = new VueRouter({
       //组件,导入需要通过路由管理的组件
       component: () => import('@/views/pc/11.login.vue'),
     },
+    {
+      //地址
+      path:"/userInfo",
+      //组件,导入需要通过路由管理的组件
+      component: () => import('@/views/pc/12.userInfo.vue'),
+    },
   ],
 
 })

@@ -193,7 +193,7 @@ import { formatDuration } from '../utils/formatDuration'
 /* 随机播放获取随机数 */
 import { getRandom } from '../utils/getRandom'
 /* vuex */
-import { mapGetters } from "vuex";
+import { mapGetters , mapState } from "vuex";
 /* 子组件 */
 import Progress from "@/components/content/Progress";
 import PlayingList from '@/components/content/PlayingList'
@@ -483,7 +483,8 @@ export default {
 
     // 获取喜欢的歌曲id列表
     getLikSongListBy() {
-      getLikSongList(this.userInfo.userId).then((res) => {
+      getLikSongList(this.userInfo.userid).then((res) => {
+        console.log('获取喜欢的歌曲id列表',res)
         this.$store.dispatch("saveLikeSongIds", res.data.ids);
         this.islike = this.likeSongIds.includes(this.nowSongDetail.id);
       });

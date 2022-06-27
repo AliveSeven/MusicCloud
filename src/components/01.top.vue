@@ -122,13 +122,13 @@
       <el-slider v-model="sliderValue" :format-tooltip="formatTooltip" ></el-slider>
     </div>
 
-    <div class="usrInfo-wrap">
+    <div class="userInfo-wrap">
       <div class="avater">
-        <span @click="toLogin()">登录</span>
-        <!-- <img :src="usrInfo.avater" @click="toLogin()"> -->
+        <span v-show="!isLogin" @click="toLogin()">登录</span>
+        <img  v-show="isLogin" :src="userInfo.avater" @click="toLogin()" >
       </div>
-      <div class="usr-wrap">
-        <span>{{ usrInfo.usrname }}</span>
+      <div class="user-wrap">
+        <span>{{ userInfo.username }}</span>
         <i class="el-icon-caret-bottom"></i>
       </div>
     </div>
@@ -172,7 +172,7 @@ export default {
     };
   },
   computed:{
-    ...mapState(['usrInfo'])
+    ...mapState(['userInfo','isLogin','token'])
   },
   created() {
     // 获取默认搜索关键词
@@ -200,7 +200,11 @@ export default {
     },
 
     toLogin(){
-      this.$router.push(`/login`);
+      if(this.isLogin || this.token || localStorage.getItem('token')){
+        this.$router.push(`/userInfo`);
+      }else{
+        this.$router.push(`/login`);
+      }
     },
 
     // 改变背景

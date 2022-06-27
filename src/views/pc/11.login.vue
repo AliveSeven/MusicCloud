@@ -28,7 +28,7 @@
                          <!-- oninput="value=value.replace(/^\.+|[^\d.]/g,'')"设置只能输入数字 -->
                         <input class="tel" type="text" v-model="phone" placeholder="请输入手机号" oninput="value=value.replace(/^\.+|[^\d.]/g,'')">
                         <div class="code-wrap">
-                            <input class="code" v-model="verification" type="text" placeholder="请输入验证码">
+                            <input class="code" v-model="captcha" type="text" placeholder="请输入验证码">
                             <el-button type="primary" round @click="sentLoginCode()">获取验证码</el-button>
                         </div>
                     </form>
@@ -66,29 +66,28 @@ export default {
             // 输入密码
             password: 'jdm123123',
             // 输入验证码
-            verification:'',
+            captcha:'',
             // 左边图片
             pic:'https://www.xdocin.com/xdoc?_key=4usklvd325aqbbzk2tcofoquoe&_func=down&_dir=login.jpg',
             // 加载
             // loading : true
             // 用户信息
-            usr :{
-                usrname : '',
+            user :{
+                username : '',
                 avater : '',
-                usrid : '',
-                level : ''
+                userid : '',
             }
         }
     },
     //通过刚才导入得mapState函数，将当前组件需要的全局属性，映射为当前组件的computed属性
     computed:{
-        ...mapState(['usrInfo'])
+        ...mapState(['userInfo','isLogin'])
     },
     created() {
 
     },
     methods:{
-        ...mapMutations(['updataUsrInfo']),
+        ...mapMutations(['updataUsrInfo','updateLogin','updataToken','updataCookie']),
         handleClick(tab){
             
         },
@@ -101,16 +100,13 @@ export default {
             loginByPhoneAPI(params).then(res =>{
                 if(res.data.code == 200){
                     // 赋值操作
-                    this.usr.usrname = res.data.profile.nickname,
-                    this.usr.avater = res.data.profile.avatarUrl
-                    this.usr.usrid = res.data.profile.userId
-                    this.$store.commit('updataUsrInfo', this.usr)
-                    this.success()
+                    this.success(res)
                 }else {
+                    this.fail()
                     console.log('登录失败，密码或者账号错误')
                 }
                 console.log('手机密码登录',res)
-            })
+            }).catch(err => err)
 
         },
 
@@ -118,11 +114,16 @@ export default {
         loginByPhoneCode(){
             let params = {
                 phone: this.phone,
-                captcha: this.verifiation,
+                captcha: this.captcha,
             }
             loginByPhoneCodeAPI(params).then(res =>{
+                if(res.data.code == 200){
+                    this.success(res)
+                }else{
+                    this.fail()
+                }
                 console.log('手机验证码登录',res)
-            })
+            }).catch(err => err)
         },
         // 发送验证码
         sentLoginCode(){
@@ -137,19 +138,33 @@ export default {
         loginStatus(){
             loginStatusAPI().then(res =>{
                 if(res.data.data.code == 200){
-                    this.$router.go(0)
+                    this.$router.push(0)
                 }
             })
         },
         // 登录成功
-        success(){
+        success(res){
             this.$message({
                 message : '登录成功',
                 type : 'success'
             })
+            this.user.username = res.data.profile.nickname
+            this.user.avater = res.data.profile.avatarUrl
+            this.user.userid = res.data.profile.userId,
+            this.$store.commit('updataToken', res.data.token)
+            this.$store.commit('updataCookie',res.data.cookie)
+            this.$store.commit('updataUsrInfo', this.user)
+            this.$store.commit('updateLogin' , true ),
+            this.$router.push(`/userInfo`)
+        },
+
+        fail(){
+            this.$message({
+                message : '登录失败，账号密码或者验证码错误',
+                type : 'error'
+            })
         }
         
-
     }
 }
 </script>

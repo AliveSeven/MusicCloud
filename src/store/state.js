@@ -1,8 +1,12 @@
 const state = {
 	// 是否登录
-	isLogin: localStorage.getItem("isLogin") ? JSON.parse(localStorage.getItem("isLogin")) : false,
+	isLogin: sessionStorage.getItem("isLogin") ? JSON.parse(sessionStorage.getItem("isLogin")) : false,
+	// 是否保存token 如果缓存中有就取出来，没有则为空
+	token : sessionStorage.getItem("token") ? JSON.parse(sessionStorage.getItem("token")) : null,
+	// 是否保存cookie 如果缓存中有就取出来，没有则为空
+	cookie : sessionStorage.getItem("cookie") ? JSON.parse(sessionStorage.getItem("cookie")) : null,
 	// 用户信息 如果缓存中有就取出来，没有则为空
-	userInfo: localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null,
+	userInfo: sessionStorage.getItem("userInfo") ? JSON.parse(sessionStorage.getItem("userInfo")) : { username : '', avater : '', userid : ''},
 	// 用户私人歌单
 	userSongList: localStorage.getItem("userSongList") ? JSON.parse(localStorage.getItem("userSongList")) : [],
 	// 用户喜欢的音乐id列表
@@ -14,16 +18,9 @@ const state = {
 	subSingerlist: [],
 	subMvlist: [],
 
-    usrInfo: {
-        usrname: '',
-        avater: 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png',
-        usrid: '',
-        level: '',
-    },
-    isLogin: false,
+	// 登录状态
     loginStatus: false,
     showLogin: false,
-    cookie: '',
 
 	/* 
 	音乐播放

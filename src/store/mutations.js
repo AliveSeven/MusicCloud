@@ -2,6 +2,7 @@ const mutations = {
 	/* 更新登录状态 */
 	updateLogin(state, payload) {
 		state.isLogin = payload;
+		sessionStorage.setItem("isLogin" , JSON.stringify(state.isLogin));
 	},
 	/* 保存用户信息 */
 	saveUserInfo(state, payload) {
@@ -151,5 +152,22 @@ const mutations = {
 	updateDownloadMusicInfo(state, payload) {
 		state.downloadMusicInfo = payload;
 	},
+	// 更新登陆后用户的信息
+	updataUsrInfo(state , payload){
+		state.userInfo = payload;
+		sessionStorage.setItem("userInfo" , JSON.stringify(state.userInfo));
+	},
+	// 更新登录后的token
+	updataToken(state , payload){
+		state.token = payload;
+		sessionStorage.setItem("token",  JSON.stringify(state.token));
+	},
+	// 更新登录后的cookie
+	updataCookie(state , payload){
+		state.cookie = payload;
+		sessionStorage.setItem("cookie", JSON.stringify(state.cookie));
+		// 设置cookie，不然登录直接没有效果
+		document.cookie = state.cookie;
+	}
 };
 export default mutations;

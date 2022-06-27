@@ -84,11 +84,6 @@
     color: #909399;
 }
 
-.foot-container .player .left-cover-content .cover-content .like-song .icon-xihuan{
-    font-size: 18px;
-    font-weight: 700;
-}
-
 .foot-container .player .left-cover-content .cover-content .like-song{
     margin: auto 15px;
 }
@@ -96,6 +91,16 @@
 .foot-container .player .left-cover-content .cover-content .download{
     margin: auto 10px;
 }
+
+.foot-container .player .left-cover-content .cover-content .like-song span{
+    filter: invert(16%) sepia(69%) saturate(6350%) hue-rotate(341deg) brightness(95%) contrast(114%);
+}
+
+.foot-container .player .left-cover-content .cover-content .like-song .icon-xihuan{
+    font-size: 18px;
+    font-weight: 700;
+}
+
 
 .foot-container .player .center-play-song{
     display: flex;
