@@ -89,6 +89,10 @@
     font-weight: 700;
 }
 
+.foot-container .player .left-cover-content .cover-content .like-song{
+    margin: auto 15px;
+}
+
 .foot-container .player .left-cover-content .cover-content .download{
     margin: auto 10px;
 }
@@ -102,7 +106,7 @@
 }
 
 .foot-container .player .center-play-song .change-play{
-    margin: 20px;
+    margin-right: 20px;
 }
 
 .foot-container .player .center-play-song .change-box {
@@ -212,6 +216,14 @@
         justify-content: center;
         margin-left: 10px;
         width: 55%;
+    }
+
+    .foot-container .player .right-voice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        margin-left: 10px;
     }
 
 }
