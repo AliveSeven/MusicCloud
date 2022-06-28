@@ -133,7 +133,7 @@ export default {
 
   methods: {
     // 抽取的方法1 顶部的数据
-    topData() {
+    async topData() {
       highQualityAPI({limit: 1,cat: this.tag}).then((res) => {
           // console.log('精品歌单',res);
           this.topList = res.data.playlists[0];

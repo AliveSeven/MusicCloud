@@ -42,7 +42,7 @@ service.interceptors.response.use(
     error => {
         error && Message({
             type:'error',
-            message:'网络连接出问题了~ 请重试~ ',
+            message:'后端接口出了点问题 ~ 请重新刷新~ ',
             showClose:true
         })
     }
