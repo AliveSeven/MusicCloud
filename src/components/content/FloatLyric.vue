@@ -102,6 +102,7 @@ export default {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			user-select: none; // 禁止选中
 		}
 		.currentActive {
 			font-size: 22px;
