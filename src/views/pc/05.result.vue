@@ -1,5 +1,5 @@
 <template>
-  <div class="result-container" v-loading="loading" element-loading-background="rgba(0, 0, 0, 0)">
+  <div class="result-container" element-loading-background="rgba(0, 0, 0, 0)">
     <div class="title-wrap">
       <!-- 标题 -->
       <h2 class="title">{{ keywords  }}</h2>
@@ -132,8 +132,6 @@ export default {
         pageSize:10,
         // 获取类型
         type:1,
-        // 加载
-        loading:true,
         showAddBall:false
       }
     },
@@ -194,7 +192,6 @@ export default {
       },
 
       getTableData(type = 1){
-        this.loading = true
         let params = {
           keywords : this.keywords,
           limit : this.pageSize,
@@ -237,8 +234,6 @@ export default {
               this.mvList = resultList
               break;
           }
-        }).then(() => {
-          this.loading = false
         })
       },
 

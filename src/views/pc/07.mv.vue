@@ -1,5 +1,5 @@
 <template>
-  <div class="mv-container" v-loading="loading">
+  <div class="mv-container">
     <div class="mv-wrap">
       <h3>MV详情</h3>
       <!-- mv -->
