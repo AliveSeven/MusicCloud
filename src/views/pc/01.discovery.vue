@@ -4,7 +4,7 @@
     <el-carousel :interval="4000" type="card" height="200px">
       <el-carousel-item v-for="(item, index) in banners" :key="index">
         <!-- 使用懒加载,动态改变图片链接 -->
-        <img v-lazy="item.imageUrl" alt="" />
+        <img v-lazy="item.imageUrl" alt="" @click="PlayBanner(item)"/>
         <h3 class="medium">{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
@@ -18,7 +18,7 @@
           <div class="img-wrap">
             <!-- 歌单描述 -->
             <div class="desc-wrap">
-              <span class="desc">{{item.copywriter}}</span>
+              <span class="desc">播放量：{{ item.playCount }}</span>
             </div>
             <!-- 歌单图片 -->
             <img v-lazy = "item.picUrl" alt="" @click="toPlaylist(item.id)" />
@@ -109,6 +109,7 @@ export default {
       //console.log('created')
       //轮播图接口
       bannerAPI().then(res=>{
+          console.log(res)
           this.banners = res.data.banners
       }).then(()=>{
             this.loading = false
@@ -116,7 +117,7 @@ export default {
 
       // 推荐歌单，params传入{limit:15}
       recommendSonglistAPI({limit:15}).then(res=>{
-          // console.log(res)
+          // console.log("推荐歌单",res)
           this.list = res.data.result
       })
 
@@ -166,6 +167,23 @@ export default {
 		  			});
 		  		});
 		  },
+
+      PlayBanner(item){
+        if(item.targetId == 0) return;
+        if(item.targetType == 1 || item.typeTitle == 300){
+          // 获取歌曲url
+          getSongUrl(item.targetId).then(res => {
+						this.$store.dispatch("saveSongUrl", res.data.data[0].url);
+					}).catch(err => err);
+          /* 根据歌曲id获取每首歌的信息*/
+				  getEverySongDetail(item.targetId).then(res => {
+				  		// 提交vuex保存当前歌曲详情
+				  		this.$store.dispatch("saveSongDetail", res.data.songs[0]);
+				  		// 提交vuex添加到播放列表
+				  		this.$store.dispatch("addPlayinglist", res.data.songs[0]);
+				  	}).catch(err => err);
+          }
+      },
       
       // 点击跳转到歌单详细页面
       toPlaylist(id){

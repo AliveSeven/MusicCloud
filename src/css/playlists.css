@@ -177,19 +177,20 @@
 
 /* 设置圆圈 */
 .playlists-container .tab-container .tab-content .items .item .img-wrap .icon-play {
-    position: absolute;
-    right: 10px;
-    bottom: 13px;
+    position: absolute;  /* 绝对定位，定死 */
+    top: 40%;
+    right: 40%;
     width: 40px;
     height: 40px;
     color: #dd6d60;
     font-size: 20px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* 弹性布局 */
+    align-items: center;   /* 侧轴居中，默认垂直方向 */
+    justify-content: center; /* 主轴居中，默认水平方向 */
+    padding-left: 5px;
     background: rgba(255, 255, 255, 0.8);
-    opacity: 0;
+    opacity: 0; /* 透明度为0 */
 }
 
 /* .playlists-container .tab-container .tab-content .items .item .img-wrap .icon-play::before {

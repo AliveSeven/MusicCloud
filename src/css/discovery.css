@@ -54,7 +54,7 @@
 .discovery-container .recommend .items .item .desc-wrap {
     position: absolute;
     width: 100%;
-    top: 0;
+    height: 30px;
     left: 0;
     font-size: 16px;
     color: white;
@@ -66,7 +66,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical; /*  */
     -webkit-line-clamp: 2;  /*  */
-    top: -50px;
+    top: -30px;
 }
 
 /* 描述‘热门推荐’文字大小 */
@@ -86,8 +86,8 @@
 /* 歌单图里面设置一个小圆圈 */
 .discovery-container .recommend .items .item .img-wrap .icon-play {
     position: absolute;  /* 绝对定位，定死 */
-    right: 10px;
-    bottom: 13px;
+    top: 40%;
+    right: 40%;
     width: 40px;
     height: 40px;
     color: #dd6d60;
@@ -96,6 +96,7 @@
     display: flex; /* 弹性布局 */
     align-items: center;   /* 侧轴居中，默认垂直方向 */
     justify-content: center; /* 主轴居中，默认水平方向 */
+    padding-left: 5px;
     background: rgba(255, 255, 255, 0.8);
     opacity: 0; /* 透明度为0 */
 }
