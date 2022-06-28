@@ -84,11 +84,9 @@
 </template>
 
 <script>
-// 导入 axios
-import axios from "axios";
 import { mapGetters } from 'vuex';
 import { getNewSongsAPI,songListAPI } from '@/utils/api'
-import { checkMusic,getSongUrl,getEverySongDetail } from '@/utils/playmusic'
+import { getSongUrl,getEverySongDetail } from '@/utils/playmusic'
 export default { 
   name: "songs",
   data() {
@@ -137,28 +135,31 @@ export default {
     // 点击按钮，播放音乐
     //每行歌曲双击播放
 		PlayMusic(song) {
-			// 先检查歌曲是否可用
-			checkMusic(song.id)
-				.then(res => {
-					// 获取歌曲url
-					getSongUrl(song.id).then(res => {
-						this.$store.dispatch("saveSongUrl", res.data.data[0].url);
+			getSongUrl(song.id).then(res => {
+        if(res.data.data[0].url == null){
+          	this.$message({
+						message: "暂时没有版权播放，换首试试",
+						type: "warning",
+						center: true,
 					});
-          getEverySongDetail(song.id).then(res =>{
+          return ;
+        }else{
+            this.$store.dispatch("saveSongUrl", res.data.data[0].url);
+            getEverySongDetail(song.id).then(res =>{
             console.log('detail',res)
             // 更新播放状态
-					  this.$store.dispatch("changePlayState", true);
-					  //提交vuex保存当前歌曲详情
-					  this.$store.dispatch("saveSongDetail", res.data.songs[0]);
-					  // 提交vuex添加到播放列表
-					  this.$store.dispatch("addPlayinglist", res.data.songs[0]);
+			      this.$store.dispatch("changePlayState", true);
+			      //提交vuex保存当前歌曲详情
+			      this.$store.dispatch("saveSongDetail", res.data.songs[0]);
+			      // 提交vuex添加到播放列表
+			      this.$store.dispatch("addPlayinglist", res.data.songs[0]);
             // console.log('nowSongDetail',this.nowSongDetail)
           })
-				})
-				.catch(err => {
+        }
+			}).catch(err => {
           console.log(err);
 					this.$message({
-						message: "暂时无法播放，换首试试",
+						message: "暂时没有版权播放，换首试试",
 						type: "warning",
 						center: true,
 					});
