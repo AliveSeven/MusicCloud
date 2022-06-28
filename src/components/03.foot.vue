@@ -340,11 +340,11 @@ export default {
         //这里写>=可以立即滚动到对应位置
         if (currentSecond >= item.time) {
           this.$store.commit("saveCurrentRow", index); //用于判断当前歌词高亮显示
-          let scrollLyric = document.querySelector("#scrollLyric");
-          scrollLyric.scrollTo({
-            top: 45 * index,
-            behavior: "smooth",
-          });
+          // let scrollLyric = document.querySelector("#scrollLyric");
+          // scrollLyric.scrollTo({
+          //   top: 45 * index,
+          //   behavior: "smooth",
+          // });
         }
       });
     },
