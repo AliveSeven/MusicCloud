@@ -109,7 +109,7 @@ export default {
     //console.log('created')
     //轮播图接口
     bannerAPI().then(res => {
-      console.log(res)
+      // console.log(res)
       this.banners = res.data.banners
     }).then(() => {
       this.loading = false
@@ -182,7 +182,11 @@ export default {
           // 提交vuex添加到播放列表
           this.$store.dispatch("addPlayinglist", res.data.songs[0]);
         }).catch(err => err);
-      }
+      } else if (item.targetType == 1000) {
+				return ;
+			} else if (item.targetType == 10) {
+				return ;
+			}
     },
 
     // 点击跳转到歌单详细页面
