@@ -11,8 +11,8 @@ import NProgress from 'nprogress'
 // let baseURL = 'http://duoduozuikeail.top:3000'
 
 
-let baseURL = 'https://lianghj.top:3000'
-// let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
+// let baseURL = 'https://lianghj.top:3000'
+let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
 
 const service = axios.create({
     baseURL,

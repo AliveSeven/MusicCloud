@@ -62,9 +62,9 @@ export default {
             // 登录方式
             activeName:'login-one',
             // 输入手机号
-            phone: '17858756825',
+            phone: '',
             // 输入密码
-            password: 'jdm123123',
+            password: '',
             // 输入验证码
             captcha:'',
             // 左边图片
