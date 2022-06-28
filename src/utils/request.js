@@ -9,9 +9,11 @@ import NProgress from 'nprogress'
 // let baseURL = "http://localhost:3000"
 // let baseURL = "https://lianghj.top:3000"
 // let baseURL = 'http://duoduozuikeail.top:3000'
+// let baseURL = 'https://netease-cloud-music-api-six-rust.vercel.app/'
 
 
-let baseURL = 'https://lianghj.top:3000'
+// let baseURL = 'https://lianghj.top:3000'
+let baseURL = 'https://music.cyrilstudio.top/'
 // let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
 
 const service = axios.create({
@@ -49,7 +51,7 @@ service.interceptors.response.use(
     error => {
         error && Message({
             type: 'error',
-            message: '网络连接出问题了~ 请重试~ ',
+            message: 'API接口出了点问题~ 请重新刷新~ ',
             showClose: true
         })
     }
