@@ -12,7 +12,7 @@
       <!-- 点击前进 -->
       <i class="el-icon-arrow-right" @click="go(1)"></i>
       <!-- 点击改变背景 -->
-      <i class="el-icon-picture-outline" id="btbg" @click="changeBg()"></i>
+      <i class="el-icon-picture-outline" id="btbg" @click=""></i>
     </div>
 
     <div>

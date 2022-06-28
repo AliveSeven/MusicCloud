@@ -17,6 +17,5 @@ export default {
     index,
     foot
   },
-  
 }
 </script>
