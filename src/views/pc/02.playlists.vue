@@ -48,7 +48,7 @@
                 <span class="num">{{ item.playCount }}</span>
               </div>
               <img v-lazy="item.coverImgUrl" alt="" @click="toPlaylist(item.id)" />
-              <span class="iconfont icon-play" @click="toPlaylist(item.id)></span>
+              <span class="iconfont icon-play" @click="toPlaylist(item.id)"></span>
             </div>
             <p class="name">{{ item.name }}</p>
           </div>
