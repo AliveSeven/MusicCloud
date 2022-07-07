@@ -4,7 +4,7 @@ import { Message } from 'element-ui'
 import NProgress from 'nprogress'
 
 // 默认接口
-// let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
+let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
 // let baseURL = "http://124.223.89.194:3000/"
 // let baseURL = "http://localhost:3000"
 // let baseURL = "https://lianghj.top:3000"
@@ -12,7 +12,8 @@ import NProgress from 'nprogress'
 // let baseURL = 'https://netease-cloud-music-api-six-rust.vercel.app/'
 
 
-let baseURL = 'https://lianghj.top:3000'
+// let baseURL = 'https://lianghj.top:3000'
+// let baseURL = 'https://www.codeman.ink/api/'
 // let baseURL = 'https://music.cyrilstudio.top/'
 // let baseURL = "https://netease-cloud-music-api-six-rust.vercel.app"
 
@@ -21,6 +22,7 @@ const service = axios.create({
     timeout: 5000,
     changeOrigin: true,  //跨域
     withCredentials: true, //axios 设置请求自动携带cookie
+    XMLHttpRequest : true
 })
 
 // 添加请求拦截器
