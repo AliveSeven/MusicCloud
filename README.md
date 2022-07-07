@@ -45,23 +45,22 @@ npm run serve
 ## 二、预览截图
 
 ### 2.1 首页(展开)
-![image-20220707121716688](D:\程序Markdown笔记\NotePictures\image-20220707121716688.png)
+![](./img/1.png)
 
 
 ### 2.2 首页(折叠)
-![image-20220707121745111](D:\程序Markdown笔记\NotePictures\image-20220707121745111.png)
+![](./img/2.png)
 
 ### 2.3 歌单页
 
-![image-20220707121808865](D:\程序Markdown笔记\NotePictures\image-20220707121808865.png)
+![](./img/3.png)
 
 
 ### 2.4 MV列表页
-![image-20220707121823635](D:\程序Markdown笔记\NotePictures\image-20220707121823635.png)
+![](./img/4.png)
 
 ### 2.5 排行榜
-![image-20220707121841216](D:\程序Markdown笔记\NotePictures\image-20220707121841216.png)
+![](./img/5.png)
 
 ### 2.6 歌手
-
-![image-20220707121909163](D:\程序Markdown笔记\NotePictures\image-20220707121909163.png)
+![](./img/6.png)
