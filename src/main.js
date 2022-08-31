@@ -55,6 +55,12 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
+// 这是给ElementUI组件库组件设置默认参数（cdn加速和生产环境配置有区别）
+Vue.prototype.$ELEMENT = {
+  size: 'small',
+  zIndex: 3000
+};
+
 // 全局混入过滤器函数
 Vue.mixin(mixins)
 
