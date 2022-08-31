@@ -83,7 +83,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import { bannerAPI, recommendSonglistAPI, recommendSongAPI, recommendMVAPI, playMusicAPI } from '@/utils/api';
 import { checkMusic, getSongUrl, getEverySongDetail } from '@/utils/playmusic'
 import { mapActions } from 'vuex'
