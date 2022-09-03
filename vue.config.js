@@ -8,23 +8,27 @@ const isProduction = process.env.NODE_ENV !== 'development';
 const devNeedCdn = false
 
 const cdn = {
+  // cdn：模块名称和模块作用域命名（对应window里面挂载的变量名称）
   externals: {
       vue: 'Vue',
       'vue-router': 'VueRouter',
       vuex: 'Vuex',
-      "element-ui": "ELEMENT"
+      "element-ui": "ELEMENT",
+      'axios': 'axios',
   },
+  // cdn的css链接
   css: [
       'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css',
   ],
+  // cdn的js链接
   js: [
       'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js',
       'https://cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js',
       'https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js',
+      'https://cdn.bootcss.com/axios/0.26.1/axios.min.js',
       'https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js'
   ]
 };
-
 
 module.exports = defineConfig({
   transpileDependencies: true,
