@@ -356,6 +356,8 @@
 
   /* mv部分UI调整 */
   .discovery-container .mvs .items .item{
+    width: 160px;
+    height: 200px;
     margin: 0;
   }
 
@@ -372,6 +374,11 @@
   /* 轮播图高度调整 */
   .discovery-container .el-carousel__container {
     height: 150px;
+  }
+
+  .discovery-container .mvs .items .item .img-wrap{
+    width: 150px;
+    height: 120px;
   }
 
 }
