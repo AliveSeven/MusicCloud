@@ -21,7 +21,7 @@ body::after{
   background-size: cover;
   opacity: 0.35;
   top: 0;
-  left: 80px;
+  left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
@@ -70,6 +70,7 @@ ol {
     padding: 10px 20px;
     z-index: 1;
     margin-bottom: 70px;
+
 }
 
 .index-contain .main .container{
@@ -102,6 +103,7 @@ ol {
     /* border-radius: 10px; */
     transition: .3s;
     overflow: hidden;
+
 }
 
 .nav-list{
@@ -153,4 +155,12 @@ ol {
 
 .nav-list:hover{
     color: #000;
+}
+
+@media screen and (max-width : 500px) {
+  
+  /* .nav{
+    display: none;
+  } */
+
 }

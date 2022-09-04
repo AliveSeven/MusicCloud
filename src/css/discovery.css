@@ -302,7 +302,27 @@
     color: darkcyan;
   }
 
+/* @media screen and (max-width : 500px) {
+  .discovery-container{
+    margin: 0;
+  }
 
+
+  .discovery-container .recommend .items .item {
+    width: 120px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  .discovery-container .recommend .items .item img {
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+  }
+
+} */
 
   
 
