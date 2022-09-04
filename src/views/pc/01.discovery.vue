@@ -1,17 +1,31 @@
 <template>
   <div class="discovery-container">
-    <!-- 轮播图，宽度平行于下面组件 -->
-    <el-carousel :interval="4000" type="card" height="200px">
-      <el-carousel-item v-for="(item, index) in banners" :key="index">
-        <!-- 使用懒加载,动态改变图片链接 -->
-        <img v-lazy="item.imageUrl" alt="" @click="PlayBanner(item)" />
-        <h3 class="medium">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+    <!-- 电脑端的轮播图 -->
+    <div class="banner-pc">
+      <!-- 轮播图，宽度平行于下面组件 -->
+      <el-carousel :interval="4000" type="card" height="200px">
+        <el-carousel-item v-for="(item, index) in banners" :key="index">
+          <!-- 使用懒加载,动态改变图片链接 -->
+          <img v-lazy="item.imageUrl" alt="" @click="PlayBanner(item)" />
+          <h3 class="medium">{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
+
+    <!-- 移动端的轮播图 -->
+    <div class="banner-phone">
+      <el-carousel indicator-position="outside">
+        <el-carousel-item v-for="(item, index) in banners" :key="index">
+          <!-- 使用懒加载,动态改变图片链接 -->
+          <img v-lazy="item.imageUrl" alt="" @click="PlayBanner(item)" />
+          <h3 class="medium">{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
     <!-- 推荐歌单 -->
     <div class="recommend">
-      <h3 class="titl">推荐歌单</h3>
+      <h3 class="title">推荐歌单</h3>
       <!-- 图片项 -->
       <div class="items">
         <div class="item" v-for="(item, index) in list" :key="index">
