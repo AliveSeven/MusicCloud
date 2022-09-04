@@ -85,8 +85,8 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { getNewSongsAPI,songListAPI } from '@/utils/api'
-import { getSongUrl,getEverySongDetail } from '@/utils/playmusic'
+import { getNewSongsAPI, getSongUrlAPI, songInfoAPI } from '@/utils/api'
+
 export default { 
   name: "songs",
   data() {
@@ -135,7 +135,7 @@ export default {
     // 点击按钮，播放音乐
     //每行歌曲双击播放
 		PlayMusic(song) {
-			getSongUrl(song.id).then(res => {
+			getSongUrlAPI({id : song.id}).then(res => {
         if(res.data.data[0].url == null){
           	this.$message({
 						message: "暂时没有版权播放，换首试试",
@@ -145,8 +145,8 @@ export default {
           return ;
         }else{
             this.$store.dispatch("saveSongUrl", res.data.data[0].url);
-            getEverySongDetail(song.id).then(res =>{
-            console.log('detail',res)
+            songInfoAPI({ids: song.id}).then(res =>{
+            // console.log('detail',res)
             // 更新播放状态
 			      this.$store.dispatch("changePlayState", true);
 			      //提交vuex保存当前歌曲详情

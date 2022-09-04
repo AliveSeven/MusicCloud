@@ -83,9 +83,7 @@
 </template>
 
 <script>
-import { bannerAPI, recommendSonglistAPI, recommendSongAPI, recommendMVAPI, playMusicAPI } from '@/utils/api';
-import { checkMusic, getSongUrl, getEverySongDetail } from '@/utils/playmusic'
-import { mapActions } from 'vuex'
+import { bannerAPI, recommendSonglistAPI, recommendSongAPI, recommendMVAPI, checkMusicAPI, getSongUrlAPI, songInfoAPI } from '@/utils/api';
 
 export default {
   name: 'discovery',
@@ -140,14 +138,15 @@ export default {
     // 点击按钮，播放音乐
     PlayMusic(song) {
       // 先检查歌曲是否可用
-      checkMusic(song.id)
+      checkMusicAPI(song.id)
         .then(res => {
           // 获取歌曲url
-          getSongUrl(song.id).then(res => {
+          getSongUrlAPI({id : song.id}).then(res => {
             this.$store.dispatch("saveSongUrl", res.data.data[0].url);
           });
-          getEverySongDetail(song.id).then(res => {
-            console.log('detail', res)
+          const params = { ids:song.id }
+          songInfoAPI(params).then(res => {
+            // console.log('detail', res)
             // 更新播放状态
             this.$store.dispatch("changePlayState", true);
             //提交vuex保存当前歌曲详情
@@ -171,11 +170,12 @@ export default {
       if (item.targetId == 0) return;
       if (item.targetType == 1 || item.typeTitle == 300) {
         // 获取歌曲url
-        getSongUrl(item.targetId).then(res => {
+        getSongUrlAPI({id: item.targetId}).then(res => {
           this.$store.dispatch("saveSongUrl", res.data.data[0].url);
         }).catch(err => err);
         /* 根据歌曲id获取每首歌的信息*/
-        getEverySongDetail(item.targetId).then(res => {
+        const params = { ids : item.targetId }
+        songInfoAPI(params).then(res => {
           // 提交vuex保存当前歌曲详情
           this.$store.dispatch("saveSongDetail", res.data.songs[0]);
           // 提交vuex添加到播放列表

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { getleadAPI,playlistDetailAPI } from '@/utils/api'
+import { getleadAPI } from '@/utils/api'
 export default {
     name:'leaderboard',
     data() {

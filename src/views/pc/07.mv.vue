@@ -162,7 +162,6 @@
 
 <script>
 // 导入 axios
-import axios from "axios";
 import { playMVAPI,commentsAPI,simiMVAPI,mvDetailAPI,artistsAPI } from '@/utils/api'
 export default {
   name: "mv",

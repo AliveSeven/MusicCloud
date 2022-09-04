@@ -9,8 +9,8 @@ export function getNewSongsAPI(params){
     })
 }
 
-// 
-export function playMusicAPI(params){
+// 获取播放音乐url
+export function getSongUrlAPI(params){
     return request({
         url:'/song/url',
         method:'get',
@@ -163,11 +163,14 @@ export function artistsAPI(params,type=""){
 //     })       
 // }
 
-export function lyricAPI(params){
+// 获取歌词
+export function lyricAPI(id){
     return request({
         url:"/lyric",
         method:'get',
-        params
+        params:{
+            id
+        }
     })       
 }
 // 获取热搜数据
@@ -258,5 +261,37 @@ export function loginStatusAPI(){
 export function logoutAPI(){
     return request({
         url : '/logout'
+    })
+}
+
+// 检查歌曲是否可用
+export function checkMusicAPI(id){
+    return request({
+        url:'/check/music',
+        params:{
+            id
+        }
+    })
+}
+
+// 喜欢当前歌曲
+export function likeNowSongAPI(id,like){
+    return request({
+        url:'/like',
+        params:{
+            id,
+            like,
+            timestamp:Date.parse(new Date())
+        }
+    })
+}
+// 获取用户喜欢的歌曲列表
+export function getLikSongListAPI(uid){
+    return request({
+        url:'/likelist',
+        params:{
+            uid,
+            timestamp:Date.parse(new Date())
+        }
     })
 }

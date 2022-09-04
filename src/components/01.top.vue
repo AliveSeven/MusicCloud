@@ -140,8 +140,6 @@
 </style>
 
 <script>
-//导入 axios
-import axios from "axios";
 import { searchHintAPI,searchSuggestAPI,hotSearchAPI } from '@/utils/api'
 import { getBgAPI } from '@/utils/api_2'
 import { mapState } from 'vuex'

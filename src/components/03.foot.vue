@@ -187,7 +187,7 @@
 
 <script>
 /* 网络请求 */ 
-import { getSongUrl, likeNowSong, getLikSongList, checkMusic, getEverySongDetail,getNowLyric } from "../utils/playmusic.js";
+import { getSongUrlAPI, checkMusicAPI, lyricAPI , likeNowSongAPI, getLikSongListAPI } from "@/utils/api"
 /* 格式化时间 */
 import { formatDuration } from '../utils/formatDuration'
 /* 随机播放获取随机数 */
@@ -294,7 +294,7 @@ export default {
         if (this.songUrl != " ") {
           this.$refs.audioplay.play();
         } else {
-          getSongUrl(this.nowSongDetail.id).then((res) => {
+          getSongUrlAPI({id : this.nowSongDetail.id}).then((res) => {
             // 保存歌曲url
             this.$store.dispatch("saveSongUrl", res.data.data[0].url);
           });
@@ -380,9 +380,9 @@ export default {
     // 获取歌曲url
     getSongUrlBy(song) {
       // 先检查歌曲是否可用
-      checkMusic(song.id)
+      checkMusicAPI(song.id)
         .then((res) => {
-          getSongUrl(song.id).then((res) => {
+          getSongUrlAPI({id : song.id}).then((res) => {
             // 保存歌曲url
             this.$store.dispatch("saveSongUrl", res.data.data[0].url);
             //提交vuex保存当前歌曲详情
@@ -483,7 +483,7 @@ export default {
 
     // 获取喜欢的歌曲id列表
     getLikSongListBy() {
-      getLikSongList(this.userInfo.userid).then((res) => {
+      getLikSongListAPI(this.userInfo.userid).then((res) => {
         console.log('获取喜欢的歌曲id列表',res)
         this.$store.dispatch("saveLikeSongIds", res.data.ids);
         this.islike = this.likeSongIds.includes(this.nowSongDetail.id);
@@ -517,7 +517,7 @@ export default {
         return;
       }
       let like = this.islike ? false : true;
-      likeNowSong(this.nowSongDetail.id, like).then((res) => {
+      likeNowSongAPI(this.nowSongDetail.id, like).then((res) => {
         // 从新获取喜欢的音乐id列表
         this.getLikSongListBy();
         if (like == true) {
@@ -546,7 +546,7 @@ export default {
     
     //   获取歌词
 		getNowLyricBy(songId) {
-			getNowLyric(songId).then(res => {
+			lyricAPI(songId).then(res => {
 				if (res.data.nolyric) return; //如果没有歌词就return
 				let lyric = res.data.lrc.lyric;
 				this.formatLyric(lyric);

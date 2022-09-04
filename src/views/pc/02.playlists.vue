@@ -74,7 +74,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import { highQualityAPI,songListAPI} from '@/utils/api'
 export default {
   data() {

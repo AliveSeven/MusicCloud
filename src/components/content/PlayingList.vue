@@ -82,7 +82,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import { getSongUrl, checkMusic,getNowLyric } from "@/utils/playmusic";
+import { getSongUrlAPI, checkMusicAPI, lyricAPI } from "@/utils/api"
 import TabBar from "../content/TabBar.vue";
 export default {
 	name: "PlayingList",
@@ -110,10 +110,10 @@ export default {
 		},
 		// 播放列表双击播放歌曲
 		playSongClick(song) {
-			checkMusic(song.id)
+			checkMusicAPI(song.id)
 				.then(res => {
 					// 获取歌曲url
-					getSongUrl(song.id).then(res => {
+					getSongUrlAPI({id : song.id}).then(res => {
 						this.$store.dispatch("saveSongUrl", res.data.data[0].url);
 					});
 					// 更新播放状态
