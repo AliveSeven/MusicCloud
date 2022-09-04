@@ -31,6 +31,10 @@
       </li>
     </div>
 
+    <div class="nav-sec">
+      <NavPhone></NavPhone>
+    </div>
+
     <div class="Lyric-wrap">
       <transition name="el-fade-in-linear">
 		  	  <FloatLyric v-show="showFloatLyric" />
@@ -51,15 +55,16 @@
 <script>
 import discovery from "@/views/pc/01.discovery.vue";
 import FloatLyric from '@/components/content/FloatLyric'
+import NavPhone from '@/components/content/NavPhone';
 import { mapGetters } from "vuex";
-
 
 export default {
   name: "index",
   components: {
     discovery,
-    FloatLyric
-  },
+    FloatLyric,
+    NavPhone,
+},
 
   computed: {
     // 通过vuex获取

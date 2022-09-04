@@ -1,3 +1,10 @@
+@font-face {
+  font-family: ZhuZiAYuanJWD;
+  src: url(https://cdn.cbd.int/anzhiyu-blog@1.1.6/fonts/ZhuZiAWan.woff2);
+  font-display: swap;
+  font-weight: lighter;
+}
+
 body,
 html {
   height: 100%; /* 高度设定 */
@@ -8,8 +15,9 @@ html {
   /* CSS3 抗锯齿形 让文字显示的更加清晰 */
   -webkit-font-smoothing: antialiased;
   /* 字体设定 */
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
- Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
+  /* font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+ Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif; */
+ font-family: ZhuZiAYuanJWD;
 
 }
 /* ::before和::after匹配一个虚拟元素，主要被用于为当前元素增加装饰性内容的。他显示的内容是其自身的“content”属性，默认是内联元素。 */

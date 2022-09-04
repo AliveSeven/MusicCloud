@@ -132,6 +132,11 @@
         <i class="el-icon-caret-bottom"></i>
       </div>
     </div>
+
+    <div class="nav-phone-btn">
+      <!-- 移动端导航栏展开按钮 -->
+      <i :class="navPhoneOpen ? 'el-icon-s-fold' : 'el-icon-s-unfold'" style="font-size: 20px; transition: .3s;" @click="changeNavPhone()"></i>
+    </div>
   
   </div>
 </template>
@@ -143,8 +148,11 @@
 import { searchHintAPI,searchSuggestAPI,hotSearchAPI } from '@/utils/api'
 import { getBgAPI } from '@/utils/api_2'
 import { mapState } from 'vuex'
+import NavPhone from '@/components/content/NavPhone';
 export default {
   name: "top",
+  /* 子组件 */
+  components: { NavPhone },
   data() {
     return {
       // 搜索属性
@@ -170,7 +178,7 @@ export default {
     };
   },
   computed:{
-    ...mapState(['userInfo','isLogin','token'])
+    ...mapState(['userInfo','isLogin','token','navPhoneOpen'])
   },
   created() {
     // 获取默认搜索关键词
@@ -216,6 +224,12 @@ export default {
           style.appendChild(text)
           document.body.appendChild(style)})
     },
+
+    // 展开、关闭移动端导航栏
+    changeNavPhone(){
+      const payload = !this.navPhoneOpen;
+      this.$store.dispatch('changeNavPhone',payload)
+    }, 
 
     // 改变背景透明度
     changeOpacity(){

@@ -31,6 +31,10 @@ const mutations = {
 	saveFavoriteMv(state, payload) {
 		state.subMvlist = payload;
 	},
+	// 更新移动端导航栏状态
+	updataNavPhone(state, payload) {
+		state.navPhoneOpen = payload;
+	},
 	// 用户喜欢的音乐id列表
 	saveLikeSongIds(state, payload) {
 		state.likeSongIds = payload;

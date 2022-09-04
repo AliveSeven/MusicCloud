@@ -21,6 +21,8 @@ const state = {
 	// 登录状态
     loginStatus: false,
     showLogin: false,
+	// 移动端展开栏状态
+	navPhoneOpen : false,
 
 	/* 
 	音乐播放

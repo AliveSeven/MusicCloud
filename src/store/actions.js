@@ -34,6 +34,10 @@ const actions = {
 	saveLikeSongIds({ commit }, payload) {
 		commit("saveLikeSongIds", payload);
 	},
+	// 改变移动端导航栏状态
+	changeNavPhone({commit} , payload){
+		commit("updataNavPhone", payload);
+	},
 
 	/* 音乐播放 */
 	//改变播放状态

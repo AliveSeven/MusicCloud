@@ -196,7 +196,7 @@ import { getRandom } from '../utils/getRandom'
 import { mapGetters , mapState } from "vuex";
 /* 子组件 */
 import Progress from "@/components/content/Progress";
-import PlayingList from '@/components/content/PlayingList'
+import PlayingList from '@/components/content/PlayingList';
 export default {
   name: "foot",
   /* 子组件 */
