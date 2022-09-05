@@ -114,6 +114,7 @@
     color: gray;
     margin-right: 20px;
     cursor: pointer;
+    text-align: center;
 }
 
 /* active之后，颜色变了 */
@@ -230,7 +231,9 @@
     }
 
     .playlists-container .tab-container .tab-bar .item{
-        font-size: 12px;
+        font-size: 10px;
+        margin: 0;
+        text-align: center;
     }
 
     /* 标签栏放盒子后面，从后面开始弄起来 */
