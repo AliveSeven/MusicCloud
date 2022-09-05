@@ -7,7 +7,7 @@
 }
 
 /* mvs-container中的filter-wrap类中的所有div子元素  */
-.mvs-container .filter-wrap>div {
+.mvs-container .filter-wrap .wrap-container>div {
   margin-bottom: 30px;
   vertical-align: baseline;
   /* 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。  */
@@ -16,12 +16,12 @@
   align-items: center;
 }
 
-.mvs-container .filter-wrap>div span {
+.mvs-container .filter-wrap .wrap-container>div span {
   font-size: 14px;
   height: 100%;
 }
 
-.mvs-container .filter-wrap>div span.title {
+.mvs-container .filter-wrap .wrap-container>div span.title {
   margin: 20px;
   color: gray;
   cursor: pointer;
@@ -29,24 +29,24 @@
 }
 
 /* title被active的时候变成黑色 */
-.mvs-container .filter-wrap>div span.title.active {
+.mvs-container .filter-wrap .wrap-container>div span.title.active {
   color: black;
   background-color: #fcf6f5;
   border-radius: 20px;
 }
 
-/* .mvs-container .filter-wrap > div span.title::before {
+/* .mvs-container .filter-wrap .wrap-container> div span.title::before {
     content: '', pos;
   } */
 
 
 /* 由竖着变横着 */
-.mvs-container .filter-wrap>div ul {
+.mvs-container .filter-wrap .wrap-container>div ul {
   display: flex;
 }
 
 /* 除了最后一个元素外,其他元素在其右边加上一条solid(实心)边框 */
-.mvs-container .filter-wrap>div ul li:not(:last-child) {
+.mvs-container .filter-wrap .wrap-container>div ul li:not(:last-child) {
   border-right: 1px solid #f2f2f1;
 }
 
@@ -148,7 +148,12 @@
     margin: 20px 0;
   }
 
-  .mvs-container .filter-wrap>div span.title{
+  .mvs-container .filter-wrap{
+    display: flex;
+    justify-content: center;
+  }
+
+  .mvs-container .filter-wrap .wrap-container>div span.title{
     margin: 5px;
     padding: 3px 3px;
   }
