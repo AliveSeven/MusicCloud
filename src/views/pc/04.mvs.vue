@@ -183,6 +183,7 @@
         :total="total"
         :current-page="page"
         :page-size="5"
+        :pager-count="5"
         :limit="limit"
       ></el-pagination>
     </div>

@@ -75,3 +75,25 @@
 .lead-container .lead-wrap .item .img-wrap:hover .player-icon{
     opacity: 1;
 }
+
+@media screen and (max-width : 500px) {
+    .lead-container{
+        margin : 0;
+        justify-content: center;
+    }
+
+    .lead-container .lead-wrap{
+        margin: 20px;
+    }
+
+    .lead-container .lead-wrap .item .img-wrap{
+        width: 110px;
+    }
+
+    .lead-container .lead-wrap .item .title{
+        width: 100px;
+        overflow: hidden;
+        font-size: 10px;
+    }
+  
+}

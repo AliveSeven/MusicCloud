@@ -15,29 +15,29 @@
         
         <!-- 导航菜单 -->
         <div class="menus_items">
-            <div class="menus_item">
+            <div class="menus_item" @click="hideNav()">
                 <i class="el-icon-headset"></i>
                 <router-link to="/discovery">
                   <span class="nav-router">发现音乐</span>
                 </router-link>
             </div>
-            <div class="menus_item">
+            <div class="menus_item" @click="hideNav()">
                 <i class="el-icon-trophy"></i>
                 <router-link to="/playlists"> <span class="nav-router">推荐歌单</span> </router-link>
             </div>
-            <div class="menus_item">
+            <div class="menus_item" @click="hideNav()">
                 <i class="el-icon-star-off"></i>
                 <router-link to="/songs"> <span class="nav-router">最新音乐</span> </router-link>
             </div>
-            <div class="menus_item">
+            <div class="menus_item" @click="hideNav()">
                 <i class="el-icon-film"></i>
                 <router-link to="/mvs"> <span class="nav-router">最新MV</span> </router-link>
             </div>
-            <div class="menus_item">
+            <div class="menus_item" @click="hideNav()">
                 <i class="el-icon-s-data"></i>
                 <router-link to="/leaderboard"> <span class="nav-router">排行榜</span> </router-link>
             </div>
-            <div class="menus_item">
+            <div class="menus_item" @click="hideNav()">
                 <i class="el-icon-mic"></i>
                 <router-link to="/artists"> <span class="nav-router">歌手</span> </router-link>
             </div>
@@ -52,6 +52,12 @@ export default {
     name: 'NavPhone',
     computed:{
         ...mapState(['userInfo','isLogin','token','navPhoneOpen'])
+    },
+    methods: {
+        // 点击导航跳转路有关闭
+        hideNav(){
+            this.$store.dispatch('changeNavPhone' , false)
+        }
     },
 }
 </script>

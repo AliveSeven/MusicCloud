@@ -214,11 +214,7 @@
 
 @media screen and (max-width : 500px) {
     .playlists-container{
-        margin: 0;
-    }
-
-    .playlists-container .top-card{
-        margin-top: 20px;
+        margin: 20px 0;
     }
 
     .playlists-container .top-card .content-wrap .tag{

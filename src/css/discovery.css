@@ -310,7 +310,7 @@
 /* 移动端布局 */
 @media screen and (max-width : 500px) {
   .discovery-container{
-    margin: 0;
+    margin: 20px 0 0 0;
   }
 
   /* 小标题居中 */
@@ -368,7 +368,6 @@
 
   /* 轮播图部分切换为移动端 */
   .discovery-container .banner-phone{
-    margin-top: 20px;
     display: block;
   }
 

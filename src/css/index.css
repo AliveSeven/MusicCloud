@@ -168,7 +168,6 @@ ol {
 .nav-sec #menu-mask {
   position: fixed;
   z-index: 102;
-  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.8);

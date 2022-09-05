@@ -142,3 +142,23 @@
   font-size: 14px;
   color: darkcyan;
 }
+
+@media screen and (max-width : 500px){
+  .mvs-container{
+    margin: 20px 0;
+  }
+
+  .mvs-container .filter-wrap>div span.title{
+    margin: 5px;
+    padding: 3px 3px;
+  }
+
+  .mvs-container .mvs .items {
+    justify-content: center;
+  }
+
+  .mvs-container .mvs .items .item{
+    width: 130px;
+  }
+
+}

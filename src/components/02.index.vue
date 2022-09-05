@@ -31,9 +31,11 @@
       </li>
     </div>
 
-    <div class="nav-sec" @click.stop="">
+    <div class="nav-sec">
       <!-- 采用一个透明的遮罩层进行点击事件从而达到隐藏 -->
-      <div id="menu-mask" :style="navPhoneOpen ? 'display: block; animation: 0.5s ease 0s 1 normal none running to_show;' : ''" @click="hideNav()"></div>
+      <transition name="el-fade-in-linear">
+        <div v-show="navPhoneOpen" id="menu-mask" @click="hideNav()"></div>
+      </transition>
       <NavPhone></NavPhone>
     </div>
 
@@ -93,7 +95,7 @@ export default {
 
   methods: {
     hideNav(){
-      this,this.$store.dispatch('changeNavPhone' , false)
+      this.$store.dispatch('changeNavPhone' , false)
     }
   },
 };

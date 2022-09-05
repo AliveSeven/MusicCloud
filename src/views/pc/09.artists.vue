@@ -2,41 +2,42 @@
   <div class="artists-container">
         <!-- 选项过滤容器 -->
         <div class="filter-wrap">
-            <div class="area-wrap">
-            <!-- 分类切换语种 -->
-            <span class="area-type">语种:</span>
-                <!-- 地区标签包 -->
-                <ul class="areas-wrap">
-                    <!-- 地区、语种：-1 全部 -->
-                    <li class="tab">
-                        <span class="title" :class="{active : area == -1}" @click="area = -1 ">全部</span>
-                    </li>
-                    <!-- 7 华语 -->
-                    <li class="tab">
-                        <span class="title" :class="{active : area == 7}" @click="area = 7">华语</span>
-                    </li>
-                    <!-- 欧美 -->
-                    <li class="tab">
-                        <span class="title" :class="{active : area == 96}" @click=" area = 96">欧美</span>
-                    </li>
-                    <!-- 日本 -->
-                    <li class="tab">
-                        <span class="title" :class="{active : area == 8}" @click=" area = 8">日本</span>
-                    </li>
-                    <!-- 韩国 -->
-                    <li class="tab">
-                        <span class="title" :class="{active : area == 16}" @click=" area = 16">韩国</span>
-                    </li>
-                    <!-- 其他 -->
-                    <li class="tab">
-                        <span class="title" :class="{active : area == 0}" @click=" area = 0">其他</span>
-                    </li>
-                </ul>
-            </div>
+            <div class="wrap-container">
+                <div class="area-wrap">
+                    <!-- 分类切换语种 -->
+                    <span class="area-type">语种:</span>
+                    <!-- 地区标签包 -->
+                    <ul class="areas-wrap">
+                        <!-- 地区、语种：-1 全部 -->
+                        <li class="tab">
+                            <span class="title" :class="{active : area == -1}" @click="area = -1 ">全部</span>
+                        </li>
+                        <!-- 7 华语 -->
+                        <li class="tab">
+                            <span class="title" :class="{active : area == 7}" @click="area = 7">华语</span>
+                        </li>
+                        <!-- 欧美 -->
+                        <li class="tab">
+                            <span class="title" :class="{active : area == 96}" @click=" area = 96">欧美</span>
+                        </li>
+                        <!-- 日本 -->
+                        <li class="tab">
+                            <span class="title" :class="{active : area == 8}" @click=" area = 8">日本</span>
+                        </li>
+                        <!-- 韩国 -->
+                        <li class="tab">
+                            <span class="title" :class="{active : area == 16}" @click=" area = 16">韩国</span>
+                        </li>
+                        <!-- 其他 -->
+                        <li class="tab">
+                            <span class="title" :class="{active : area == 0}" @click=" area = 0">其他</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="type-wrap">
-                <!-- 分类切换歌手类型 -->
-                <span class="types-type">分类:</span>
+                <div class="type-wrap">
+                    <!-- 分类切换歌手类型 -->
+                    <span class="types-type">分类:</span>
                     <!-- 类型标签包 -->
                     <ul class="types-wrap">
                         <!-- 歌手类型：-1 全部 -->
@@ -56,7 +57,9 @@
                             <span class="title" :class="{active : type == 3}" @click="type = 3 ">乐队组合</span>
                         </li>
                     </ul>
+                </div>
             </div>
+
         </div>
         <!-- 歌手容器 -->
         <div class="artists">
@@ -75,6 +78,7 @@
         :total="total"
         :current-page="page"
         :page-size="limit"
+        :pager-count="5"
       ></el-pagination>
   </div>
 </template>

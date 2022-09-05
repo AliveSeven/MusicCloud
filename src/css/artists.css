@@ -7,33 +7,33 @@
 }
 
 /* artists-container中的filter-wrap类中的所有div子元素  */
-.artists-container .filter-wrap > div{
+.artists-container .filter-wrap .wrap-container > div{
     margin-bottom: 30px;
     vertical-align: baseline; /* 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。  */
     display: flex; /* 弹性布局,横着放 */
     align-items: center;
 }
 
-.artists-container .filter-wrap > div span{
+.artists-container .filter-wrap .wrap-container > div span{
     font-size: 14px;
     height: 100%;
 }
 
-.artists-container .filter-wrap > div span.title{
+.artists-container .filter-wrap .wrap-container > div span.title{
     margin: 20px;
     color: gray;
     cursor: pointer;
     padding: 5px 20px;
 }
 
-.artists-container .filter-wrap > div span.title.active{
+.artists-container .filter-wrap .wrap-container > div span.title.active{
     color: black;
     background-color: #fcf6f5;
     border-radius: 20px;
 }
 
 /* 由竖着变横着 */
-.artists-container .filter-wrap > div ul{
+.artists-container .filter-wrap .wrap-container > div ul{
     display: flex;
 }
 
@@ -73,4 +73,39 @@
 .artists-container .artists .artists-wrap .name{
     text-align: center;
     margin: 10px auto;
+}
+
+@media screen and (max-width : 500px) {
+    .artists-container{
+        margin: 20px 0;
+    }
+
+    .artists-container .filter-wrap{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .artists-container .filter-wrap .wrap-container > div span.title{
+        margin: 7px;
+        padding: 2px;
+    }
+
+    .artists-container .artists{
+        justify-content: center;
+    }
+
+    .artists-container .artists .artists-wrap .img-wrap{
+        width: 120px;
+    }
+
+    .artists-container .artists .artists-wrap .name{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width : 360px){
+    .artists-container .artists .artists-wrap .img-wrap{
+        width: 110px;
+    }
 }
