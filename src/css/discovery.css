@@ -103,7 +103,7 @@
     justify-content: center; /* 主轴居中，默认水平方向 */
     padding-left: 5px;
     background: rgba(255, 255, 255, 0.8);
-    opacity: 0; /* 透明度为0 */
+    opacity: 0; /* 透明度为0 */ 
 }
 /* 鼠标经过歌单图片，圆圈透明度变成100%，就是展示出来，之前不展示的，透明度为0 */
 .discovery-container .recommend .items .item .img-wrap:hover .icon-play {
@@ -307,8 +307,8 @@
     color: darkcyan;
   }
 
+/* 移动端布局 */
 @media screen and (max-width : 500px) {
-  /* 移动端布局 */
   .discovery-container{
     margin: 0;
   }
@@ -327,6 +327,7 @@
     overflow: hidden;
   }
 
+  /* 歌单图片大小调整 */
   .discovery-container .recommend .items .item img {
     width: 100%;
     height: 110px;
@@ -340,8 +341,11 @@
     font-size: 10px;
   }
 
+  /* 播放量UI调整 */
   .discovery-container .recommend .items .item .desc-wrap span{
-    font-size: 8px;
+    font-size: 4px;
+    top: 2px;
+    position: absolute;
   }
 
   /* 最新音乐UI调整 */
@@ -350,6 +354,7 @@
     width: 100%;
   }
 
+  /* 最新音乐UI调整 */
   .discovery-container .news .items .item{
     width: 100%;
   }
@@ -367,6 +372,7 @@
     display: block;
   }
 
+  /* PC端轮播图不展示 */
   .discovery-container .banner-pc{
     display: none;
   }
@@ -376,9 +382,46 @@
     height: 150px;
   }
 
+  /* MV图片大小调整 */
   .discovery-container .mvs .items .item .img-wrap{
     width: 150px;
     height: 120px;
+  }
+
+  /* 播放小图标UI调整 */
+  .discovery-container .recommend .items .item .img-wrap .icon-play {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 实现水平垂直居中 */
+    width: 30px;
+    height: 30px;
+    color: #dd6d60;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0; /* 不透明度为0 */
+  } 
+
+  /* 播放量数字调整 */
+  .discovery-container .recommend .items .item .desc-wrap {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    max-height: 50px; 
+    padding: 5px;
+    overflow: hidden; /* 超过盒子部分隐藏 */
+    text-overflow: ellipsis;  /* 省略号 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical; /*  */
+    -webkit-line-clamp: 1;  /*  */
+    top: -30px;
   }
 
 }

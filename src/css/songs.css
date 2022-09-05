@@ -18,6 +18,7 @@
     margin-right: 20px;
     cursor: pointer;
     padding: 5px 20px;
+    text-align: center;
   }
   
   .songs-container .tab-bar .item.active {
@@ -80,10 +81,54 @@
     margin-top: 25px;
   }
 
+  .songs-container .name-wrap span{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+
   .songs-container .td-title{
     text-align: center;
   }
 
   .songs-container .th-title{
     padding-bottom: 15px;
+  }
+
+  .songs-container .th-title:nth-last-child(1){
+    padding: 0 15px 15px 15px;
+  }
+
+@media screen and (max-width : 500px) {
+  .songs-container {
+    margin: 0;
+  }
+
+  .songs-container .tab-bar .item{
+    margin: 0;
+  }
+
+  .songs-container .td-title .td-wrap{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+
+  .el-table td:first-child{
+    padding: 0;
+  }
+
+  .el-table .song-wrap .icon-mv{
+    display: none;
+  }
+
+  .el-table .img-wrap{
+    width: 100%;
+  }
+
+
 }

@@ -45,7 +45,7 @@
             <div class="img-wrap">
               <div class="num-wrap">
                 播放量:
-                <span class="num">{{ item.playCount }}</span>
+                <span class="num">{{ item.playCount | ellipsisPlayVolume }}</span>
               </div>
               <img v-lazy="item.coverImgUrl" alt="" @click="toPlaylist(item.id)" />
               <span class="iconfont icon-play" @click="toPlaylist(item.id)"></span>
@@ -68,6 +68,7 @@
         :total="total"
         :current-page="page"
         :page-size="10"
+        :pager-count="5"
       ></el-pagination>
     </div>
   </div>

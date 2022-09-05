@@ -130,6 +130,7 @@
 .playlists-container .tab-container .tab-content .items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     /* 让弹性盒元素在必要的时候拆行 */
 }
 
@@ -210,3 +211,98 @@
     -webkit-line-clamp: 2; /* 最多两行 */
     font-size: 14px;
 }
+
+@media screen and (max-width : 500px) {
+    .playlists-container{
+        margin: 0;
+    }
+
+    .playlists-container .top-card{
+        margin-top: 20px;
+    }
+
+    .playlists-container .top-card .content-wrap .tag{
+        font-size: 14px;
+    }
+    
+    .playlists-container .top-card .content-wrap .title{
+        font-size: 8px;
+    }
+
+    .playlists-container .top-card .content-wrap .info{
+        font-size : 6px;
+    }
+
+    .playlists-container .tab-container .tab-bar .item{
+        font-size: 6px;
+    }
+
+    /* 标签栏放盒子后面，从后面开始弄起来 */
+    .playlists-container .tab-container .tab-bar {
+        overflow: scroll;
+    }
+
+    .playlists-container .tab-container .tab-content .items .item{
+        width: 110px;
+        margin: 10px;
+    }
+
+    .playlists-container .tab-container .tab-content .items .item img{
+        width: 100%;
+        height: 110px;
+    }
+
+    /* 设置圆圈 */
+    .playlists-container .tab-container .tab-content .items .item .img-wrap .icon-play {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* 实现水平垂直居中 */
+        width: 30px;
+        height: 30px;
+        color: #dd6d60;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.8);
+        opacity: 0; /* 不透明度为0 */
+    }
+
+    .playlists-container .tab-container .tab-content .items .item .num-wrap{
+        font-size: 6px;
+    }
+
+    .playlists-container .tab-container .tab-content .items .item .name{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width : 450px){
+    .playlists-container .tab-container .tab-content .items .item{
+        width: 90px;
+        margin: 10px;
+    }
+
+    .playlists-container .tab-container .tab-content .items .item img{
+        width: 100%;
+        height: 90px;
+    }
+
+  }
+  
+  @media screen and (max-width : 360px){
+    /* 歌单图片大小调整 */
+    .playlists-container .tab-container .tab-content .items .item{
+      width: 120px;
+      margin: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .playlists-container .tab-container .tab-content .items .item img{
+      width: 100%;
+      height: 120px;
+      border-radius: 5px;
+    }
+  }

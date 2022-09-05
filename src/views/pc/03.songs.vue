@@ -55,20 +55,32 @@
               <span></span>
             </div>
           </td>
-          <td class="td-title">{{ item.album.artists["0"].name }}</td>
-          <td class="td-title">{{ item.album.name }}</td>
-          <td class="td-title">{{ item.duration | formatDuration}}</td>
+          <td class="td-title">
+            <div class="td-wrap">
+              {{ item.album.artists["0"].name }}
+            </div>
+          </td>
+          <td class="td-title">
+            <div class="td-wrap">
+              {{ item.album.name }}
+            </div>
+          </td>
+          <td class="td-title">
+            <div class="td-wrap">
+              {{ item.duration | formatDuration}}
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
 
 
-      <div class="song-page">
-        <!-- 分页器
+      <!-- 分页器
         current-page 当前页
         page-size 每页多少条数据
         current-change 页码改变事件
-        -->
+      -->
+      <div class="song-page">
         <el-pagination
         :hide-on-single-page="true"
         background
@@ -76,8 +88,9 @@
         :current-page="page"
         :page-sizes="[5, 10, 15, 20, 30]"
         :page-size="10"
-        layout="total, prev, pager, next, jumper"
+        layout="prev, pager, next"
         :total="100"
+        :pager-count="5"
         ></el-pagination>
       </div>
   </div>
@@ -175,8 +188,7 @@ export default {
       this.page = val
       // 重新获取数据
       this.getList()
-    }
-
+    },
 
   },
 };

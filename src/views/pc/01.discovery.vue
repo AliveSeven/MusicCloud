@@ -32,7 +32,7 @@
           <div class="img-wrap">
             <!-- 歌单描述 -->
             <div class="desc-wrap">
-              <span class="desc">播放量：{{ item.playCount }}</span>
+              <span class="desc">播放量：{{ item.playCount | ellipsisPlayVolume }}</span>
             </div>
             <!-- 歌单图片 -->
             <img v-lazy="item.picUrl" alt="" @click="toPlaylist(item.id)" />
@@ -48,7 +48,7 @@
     <div class="news">
       <h3 class="title">最新音乐</h3>
       <div class="items">
-        <div class="item" v-for="(item, index) in songs" :key="index">
+        <div class="item" v-for="(item, index) in songs" :key="index" @dblclick="PlayMusic(item)">
           <div class="img-wrap">
             <!-- 封面 -->
             <img v-lazy="item.picUrl" alt="">
