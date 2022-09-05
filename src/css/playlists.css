@@ -236,11 +236,6 @@
         text-align: center;
     }
 
-    /* 标签栏放盒子后面，从后面开始弄起来 */
-    .playlists-container .tab-container .tab-bar {
-        overflow: scroll;
-    }
-
     .playlists-container .tab-container .tab-content .items .item{
         width: 110px;
         margin: 10px;
