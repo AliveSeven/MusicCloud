@@ -183,6 +183,7 @@ export default {
   created() {
     // 获取默认搜索关键词
     this.getDefaultKeywords();
+    
   },
 
   watch: {
@@ -346,7 +347,8 @@ export default {
     // 滑动条
     formatTooltip(val) {
         return val / 100;
-      }
+    },
+
   },
 };
 </script>

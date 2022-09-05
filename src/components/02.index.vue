@@ -31,7 +31,9 @@
       </li>
     </div>
 
-    <div class="nav-sec">
+    <div class="nav-sec" @click.stop="">
+      <!-- 采用一个透明的遮罩层进行点击事件从而达到隐藏 -->
+      <div id="menu-mask" :style="navPhoneOpen ? 'display: block; animation: 0.5s ease 0s 1 normal none running to_show;' : ''" @click="hideNav()"></div>
       <NavPhone></NavPhone>
     </div>
 
@@ -56,7 +58,7 @@
 import discovery from "@/views/pc/01.discovery.vue";
 import FloatLyric from '@/components/content/FloatLyric'
 import NavPhone from '@/components/content/NavPhone';
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "index",
@@ -69,6 +71,7 @@ export default {
   computed: {
     // 通过vuex获取
     ...mapGetters(["nowSongDetail","isShowSongDetail","showFloatLyric"]),
+    ...mapState(['navPhoneOpen']),
     
     // 给router-view加个唯一的key，来保证路由切换时都会重新渲染触发钩子了
     key(){
@@ -89,7 +92,9 @@ export default {
   // Bus的接收端，mounted()方法和data()和methods是同级别的，在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作
 
   methods: {
-
+    hideNav(){
+      this,this.$store.dispatch('changeNavPhone' , false)
+    }
   },
 };
 </script>

@@ -11,6 +11,7 @@ export const subAlbumlist = state => state.subAlbumlist;
 export const subSingerlist = state => state.subSingerlist;
 export const subMvlist = state => state.subMvlist;
 export const likeSongIds = state => state.likeSongIds;
+export const navPhoneOpen = state => state.navPhoneOpen;
 
 /* 音乐播放 */
 // 音乐播放状态
