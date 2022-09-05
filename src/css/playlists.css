@@ -301,7 +301,7 @@
     }
   }
 
-  @media screen and (max-width : 447px) {
+  @media screen and (max-width : 430px) {
     .playlists-container .tab-container .tab-bar .item{
         font-size: 10px;
         margin: 0;
