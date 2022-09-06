@@ -177,7 +177,7 @@
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
-        font-size: 6px;
+        font-size: 12px;
       }
     
     .result-container .td-title .td-wrap:nth-last-child(1){

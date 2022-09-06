@@ -271,7 +271,7 @@
   }
 
   .song-wrap .name-wrap span{
-    font-size: 6px;
+    font-size: 12px;
   }
 
   .playlist-container .td-title .td-wrap{
@@ -280,7 +280,7 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
-    font-size: 6px;
+    font-size: 12px;
   }
 
   .playlist-container .td-title .td-wrap:nth-last-child(1){
