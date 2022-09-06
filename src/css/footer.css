@@ -200,7 +200,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .foot-container .player .left-cover-content .cover-content .like-song{
@@ -241,7 +241,7 @@
     }
     
     .foot-container .player .center-play-song .song-progress span{
-        font-size: 6px;
+        font-size: 12px;
     }
 
     /* .foot-container .player .right-voice{
@@ -257,11 +257,11 @@
     }
 
     .foot-container .player .center-play-song .change-play{
-        margin: 5px;
+        margin: 5px 5px 10px 5px;
     }
 
     .foot-container .player .center-play-song .change-play i{
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .foot-container .player .center-play-song .playmodel{
@@ -319,7 +319,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 8px;
+        font-size: 12px;
     }
 
 } 
