@@ -55,11 +55,23 @@
                                 </div>
                             </td>
                             <!-- 歌手 -->
-                            <td>{{ item.ar[0].name }}</td>
+                            <td class="td-title">
+                                <div class="td-wrap">
+                                    {{ item.ar[0].name }}
+                                </div>
+                            </td>
                             <!-- 专辑名 -->
-                            <td>{{ item.al.name }}</td>
+                            <td class="td-title">
+                                <div class="td-wrap">
+                                    {{ item.al.name }}
+                                </div>
+                            </td>
                             <!-- 时长 -->
-                            <td>{{ item.dt | formatDuration }}</td>
+                            <td class="td-title">
+                                <div class="td-wrap">
+                                    {{ item.dt | formatDuration }}
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
               </table>

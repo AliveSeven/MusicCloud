@@ -75,3 +75,55 @@
     color: #888482;
     text-align: left;
 }
+
+@media screen and (max-width : 500px){
+    .artist-container{
+        margin: 0;
+    }
+
+    .artist-container .artist-wrap .img-wrap img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .artist-container .artist-wrap .artist-info > div span{
+        font-size: 12px;
+    }
+
+    .artist-info .desc-wrap{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+
+    .artist-info .desc-wrap p{
+        font-size: 12px;
+    }
+
+    .artist-container .td-title .td-wrap{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        font-size: 12px;
+    }
+
+    .artist-container .td-title .td-wrap:nth-last-child(1){
+        padding-left: 5px;
+      }
+    
+    .artist-container .el-table th:nth-last-child(1){
+      padding-left: 5px;
+    }
+
+    .artist-container .name-wrap .first-title{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

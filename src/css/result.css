@@ -171,6 +171,15 @@
         margin: 20px 0;
     }
 
+    .result-container .name-wrap .first-title{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        font-size: 12px;
+    }
+
     .result-container .td-title .td-wrap{
         display: -webkit-box;
         overflow: hidden;
@@ -178,7 +187,7 @@
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         font-size: 12px;
-      }
+    }
     
     .result-container .td-title .td-wrap:nth-last-child(1){
         padding-left: 5px;

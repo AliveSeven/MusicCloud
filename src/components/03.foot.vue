@@ -149,7 +149,7 @@
       <!-- 右侧声音控制 -->
       <div class="right-voice">
         <!-- 静音按钮 -->
-        <span>
+        <span class="mute">
           <i
             class="iconfont icon-jingyin"
             @click="cancelMute"

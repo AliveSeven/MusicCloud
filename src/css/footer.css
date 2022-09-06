@@ -200,7 +200,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 15px;
+        font-size: 8px;
     }
 
     .foot-container .player .left-cover-content .cover-content .like-song{
@@ -235,16 +235,33 @@
 
 @media screen and (max-width : 500px) {
 
-    .foot-container .player .center-play-song .song-progress{
-        display: none;
+    .foot-container .player .center-play-song .song-progress {
+        /* display: none; */
+        width: 100%;
+    }
+    
+    .foot-container .player .center-play-song .song-progress span{
+        font-size: 6px;
     }
 
     /* .foot-container .player .right-voice{
         display: none;
     } */
 
+    .foot-container .player .left-cover-content .cover-content .songname{
+        margin: 0  5px;
+    }
+
+    .foot-container .player .center-play-song .change-box{
+        margin: 0 5px;
+    }
+
     .foot-container .player .center-play-song .change-play{
-        margin: 10px;
+        margin: 5px;
+    }
+
+    .foot-container .player .center-play-song .change-play i{
+        font-size: 8px;
     }
 
     .foot-container .player .center-play-song .playmodel{
@@ -255,8 +272,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 10px;
-        width: 40%;
+        margin-left: 0px;
+        width: 90%;
     }
 
     .foot-container .player .left-cover-content .cover-content .like-song{
@@ -271,9 +288,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 55%;
+        width: 5%;
     }
 
+    .foot-container .player .right-voice .v-progress{
+        display: none;
+    }
+
+    .foot-container .player .right-voice .mute{
+        display: none;
+    }
+
+    .foot-container .player .left-cover-content .cover-content .cover{
+        width: 50px;
+    }
+
+    .foot-container .player .left-cover-content .cover-content .songname .singer{
+        font-size: 8px;
+    }
+
+    .footicon{
+        font-size: 8px;
+    }
 }
 
 @media screen and (max-width : 450px){
@@ -283,7 +319,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 15px;
+        font-size: 8px;
     }
 
 } 

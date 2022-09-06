@@ -98,7 +98,7 @@
   }
 
   .songs-container .th-title:nth-last-child(1){
-    padding: 0 15px 15px 15px;
+    padding: 0 0px 15px 5px;
   }
 
 @media screen and (max-width : 500px) {
@@ -117,6 +117,10 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     font-size: 12px;
+  }
+
+  .songs-container .td-title .td-wrap:nth-last-child(1){
+    padding-left: 5px;
   }
 
   .el-table td:first-child{
