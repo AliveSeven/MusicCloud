@@ -116,6 +116,7 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
+    font-size: 12px;
   }
 
   .el-table td:first-child{
