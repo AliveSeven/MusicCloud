@@ -20,7 +20,8 @@ const service = axios.create({
     baseURL,
     timeout: 5000,
     changeOrigin: true,  //跨域
-    withCredentials: true, //axios 设置请求自动携带cookie
+    // withCredentials: true, //axios 设置请求自动携带cookie
+    withCredentials: false,
     XMLHttpRequest : true
 })
 
