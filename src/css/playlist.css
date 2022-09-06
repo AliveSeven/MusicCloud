@@ -9,6 +9,7 @@
 
 .playlist-container .top-wrap {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .playlist-container .top-wrap span {
@@ -122,6 +123,10 @@
   margin-right: 10px;
 }
 
+.playlist-container .td-title{
+  text-align: center;
+}
+
 .playlist-container .comment-wrap {
   margin-bottom: 70px;
 }
@@ -201,5 +206,98 @@
   user-select: none;
   /* 文字不给被选中 */
   margin-bottom: 100px;
+}
+
+@media screen and (max-width : 500px) {
+  .playlist-container{
+    margin: 20px 0;
+  }
+
+  .playlist-container .comment-wrap{
+    margin-bottom: 20px;
+  }
+
+  .playlist-container .top-wrap .img-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .playlist-container .top-wrap .img-wrap img{
+    width: 130px;
+    height: 130px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .author-wrap img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .title{
+    font-size: 14px;
+  }
+
+  .playlist-container .top-wrap span{
+    font-size: 8px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .author-wrap .time{
+    font-size: 8px;
+  }
+
+  .playlist-container .top-wrap .info-wrap span:first-child{
+    font-size: 10px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .tag-wrap li{
+    font-size: 10px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .play-wrap{
+    display: none;
+  }
+
+  .playlist-container .top-wrap .info-wrap .desc-wrap span:last-child{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 10px;
+  }
+
+  .song-wrap .name-wrap .item{
+    display: none;
+  }
+
+  .song-wrap .name-wrap span{
+    font-size: 6px;
+  }
+
+  .playlist-container .td-title .td-wrap{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 6px;
+  }
+
+  .playlist-container .td-title .td-wrap:nth-last-child(1){
+    padding-left: 5px;
+  }
+
+  .playlist-container .el-table th:nth-last-child(1){
+    padding-left: 5px;
+  }
+  
+}
+
+@media screen and (max-width : 360px){
+  .playlist-container .td-title .td-wrap:nth-last-child(1){
+    padding-left: 0px;
+  }
+
+
 }
 

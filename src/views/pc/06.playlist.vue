@@ -84,11 +84,23 @@
                 </div>
               </td>
               <!-- 歌手名称 -->
-              <td>{{ item.ar[0].name }}</td>
+              <td class="td-title">
+                <div class="td-wrap">
+                  {{ item.ar[0].name }}
+                </div>
+              </td>
               <!-- 专辑名称 -->
-              <td>{{ item.al.name }}</td>
+              <td class="td-title">
+                <div class="td-wrap">
+                  {{ item.al.name }}
+                </div>
+              </td>
               <!-- 音乐时长 -->
-              <td>{{ item.dt | formatDuration }}</td>
+              <td class="td-title">
+                <div class="td-wrap">
+                  {{ item.dt | formatDuration }}
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -166,7 +178,7 @@
         </div>
         <!-- 分页器 -->
         <el-pagination :hide-on-single-page="true" background @current-change="handleCurrentChange" :current-page="page"
-          :page-sizes="[5, 10, 20, 30, 50]" :page-size="10" layout="total, sizes, prev, pager, next, jumper"
+          :pager-count="5" :page-size="10" layout="prev, pager, next"
           :total="commentInfo.total">
         </el-pagination>
       </el-tab-pane>
