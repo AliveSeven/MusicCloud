@@ -115,9 +115,9 @@
           background
           @current-change="handleCurrentChange"
           :current-page="page"
-          :page-sizes="[5, 10, 20, 30, 50, 100]"
           :page-size="pageSize"
-          layout="total, sizes, prev, pager, next, jumper"
+          :pager-count="5"
+          layout=" prev, pager, next"
           :total="total"
         >
         </el-pagination>

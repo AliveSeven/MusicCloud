@@ -261,7 +261,7 @@
     }
 
     .header .input-box {
-        width: 200px;
+        width: 250px;
         margin-left: 10px;
     }
 
@@ -306,5 +306,17 @@
 
     .header .userInfo-wrap .user-wrap{
         display: none;
+    }
+}
+
+@media screen and (max-width : 390px){
+    .header .input-box {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width : 355px){
+    .header .input-box {
+        width: 200px;
     }
 }
