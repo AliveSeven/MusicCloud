@@ -46,7 +46,8 @@ Vue.use(VueLazyload,{
   preLoad: 1.3,
   error: import('./assets/images/error.svg'), //加载失败显示的图片
   // loading: require('./assets/images/loading.gif'), 
-  loading: 'https://m1.im5i.com/2022/08/31/UqnBNq.gif', // 加载中显示的图片
+  // loading: 'https://m1.im5i.com/2022/08/31/UqnBNq.gif',
+  loading:'https://pic1.imgdb.cn/item/63344ce316f2c2beb1649065.gif', // 加载中显示的图片
   attempt: 3, 
 })
 
