@@ -24,73 +24,73 @@ const router = new VueRouter({
       //地址
       path:"/discovery",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/01.discovery.vue'),
+      component: () => import('@/components/Discovery/Discovery.vue'),
     },
     {
       //地址
       path:"/playlists",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/02.playlists.vue'),
+      component: () => import('@/components/PlayLists/PlayLists.vue'),
     },
     {
       //地址
       path:"/songs",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/03.songs.vue'),
+      component: () => import('@/components/Songs/Songs.vue'),
     },
     {
       //地址
       path:"/mvs",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/04.mvs.vue'),
+      component: () => import('@/components/Mvs/Mvs.vue'),
     },
     {
       //地址
       path:"/result",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/05.result.vue'),
+      component: () => import('@/components/Result/Result.vue'),
     },
     {
       //地址
       path:"/playlist",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/06.playlist.vue'),
+      component: () => import('@/components/PlayLists/PlayList.vue'),
     },
     {
       //地址
       path:"/mv",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/07.mv.vue'),
+      component: () => import('@/components/Mvs/Mv.vue'),
     },
     {
       //地址
       path:"/leaderboard",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/08.leaderboard.vue'),
+      component: () => import('@/components/LeaderBoard/LeaderBoard.vue'),
     },
     {
       //地址
       path:"/artists",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/09.artists.vue'),
+      component: () => import('@/components/Artists/Artists.vue'),
     },
     {
       //地址
       path:"/artist",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/10.artist.vue'),
+      component: () => import('@/components/Artists/Artist.vue'),
     },
     {
       //地址
       path:"/login",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/11.login.vue'),
+      component: () => import('@/components/Login/Login.vue'),
     },
     {
       //地址
       path:"/userInfo",
       //组件,导入需要通过路由管理的组件
-      component: () => import('@/views/pc/12.userInfo.vue'),
+      component: () => import('@/components/UserInfo/UserInfo.vue'),
     },
   ],
 

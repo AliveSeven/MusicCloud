@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <top></top>
-    <index></index>
-    <foot></foot>
+    <Top></Top>
+    <Index></Index>
+    <Foot></Foot>
   </div>
 </template>
 
 <script>
-import top from '@/components/01.top'
-import index from '@/components/02.index'
-import foot from '@/components/03.foot'
+import Top from '@/views/Top'
+import Index from '@/views/Index'
+import Foot from '@/views/Foot'
 export default {
   name: 'app',
   components:{
-    top,
-    index,
-    foot
+    Top,
+    Index,
+    Foot
   },
 }
 </script>

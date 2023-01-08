@@ -30,7 +30,6 @@ const service = axios.create({
 service.interceptors.request.use(config => {
     // 添加 进度条
     NProgress.start()
-
     return config
 })
 
@@ -38,7 +37,6 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(config => {
     // 隐藏 进度条
     NProgress.done()
-
     return config
 })
 

@@ -83,7 +83,7 @@
 <script>
 import { mapGetters } from "vuex";
 import { getSongUrlAPI, checkMusicAPI, lyricAPI } from "@/utils/api"
-import TabBar from "../content/TabBar.vue";
+import TabBar from "../Content/TabBar.vue";
 export default {
 	name: "PlayingList",
 	components: { TabBar },
