@@ -1,0 +1,99 @@
+@font-face {
+  font-family: ZhuZiAYuanJWD;
+  src: url(https://wcdn.tomatogames.com/web/guonei/wbqj/asspringfes/web/fonts/ZhuZiAWan.woff2);
+  font-display: swap;
+  font-weight: lighter;
+}
+
+body,
+html {
+  height: 100%; /* 高度设定 */
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  overflow: hidden;
+  /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  /* 字体设定 */
+  /* font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+ Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif; */
+ font-family: ZhuZiAYuanJWD;
+
+}
+/* ::before和::after匹配一个虚拟元素，主要被用于为当前元素增加装饰性内容的。他显示的内容是其自身的“content”属性，默认是内联元素。 */
+/* ::before或::after都必须和content属性结合使用，content不能没有，内容至少为空 */
+body::after{
+  content: '';
+  /* background-image: url('https://tva4.sinaimg.cn/mw1024/ec43126fgy1gwjqvksjruj21k410pe81.jpg'); */
+  /* background-image: url("https://m1.im5i.com/2022/08/31/Uqn1GQ.jpg"); */
+  background-image: url('https://www.xdocin.com/xdoc?_key=ytx5cqicsjhtpgrqvza6jo3qcu&_func=down&_dir=99116956_p0_C.jpg');
+  background-size: cover;
+  opacity: 0.35;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* 全体过渡设为0.5s */
+  transition: 0.5s;
+}
+
+a {
+    /* 消去下划线 */
+  text-decoration: none;
+}
+
+#app {
+    height: 100%;
+}
+  
+ul,
+ol {
+    /* 消去ol和ul左边的那个圆圈的东西或者是序列 */
+  list-style: none;
+}
+
+
+.iconfont {
+    /* 悬浮于连接上时，通常为手 */
+  cursor: pointer;
+}
+
+/*  播放列表动画 */
+.playlist-enter,
+.playlist-leave-to {
+	transform: translateX(100%);
+}
+.playlist-enter-active,
+.playlist-leave-active {
+	transition: all 0.6s;
+}
+.playlist-enter-to {
+	transform: translateX(0);
+}
+
+/* 路由动画 */
+.child-view {
+  position: absolute;
+  width:100%;
+  /* overflow: hidden; */
+  transition: all .8s cubic-bezier(.55, 0, .1, 1);
+}
+
+/* 离开 */
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(50px)
+}
+/* 进入 */
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateX(-50px)
+}
