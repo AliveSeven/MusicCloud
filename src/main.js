@@ -23,7 +23,7 @@ import "./assets/style/index.css"
 import "./assets/icon/iconfont.css"
 import './css/ele.css'
 import './css/discovery.css'
-import './css/top.css'
+// import './css/top.css'
 import './css/playlists.css'
 import './css/songs.css'
 import './css/mvs.css'
@@ -34,7 +34,6 @@ import './css/leaderboard.css'
 import './css/artists.css'
 import './css/artist.css'
 import './css/login.css'
-// import './css/footer.css'
 import './assets/iconfont/colorfont.css'
 import './assets/iconfont/iconfont.css'
 // 导入进度条样式
