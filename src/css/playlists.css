@@ -285,18 +285,18 @@
 
   }
   
-  @media screen and (max-width : 360px){
-    /* 歌单图片大小调整 */
-    .playlists-container .tab-container .tab-content .items .item{
-      width: 120px;
-      margin: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-  
-    .playlists-container .tab-container .tab-content .items .item img{
-      width: 100%;
-      height: 120px;
-      border-radius: 5px;
-    }
+@media screen and (max-width : 360px){
+  /* 歌单图片大小调整 */
+  .playlists-container .tab-container .tab-content .items .item{
+    width: 120px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
   }
+
+  .playlists-container .tab-container .tab-content .items .item img{
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+  }
+}

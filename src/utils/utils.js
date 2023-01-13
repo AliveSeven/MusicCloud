@@ -29,6 +29,8 @@ export const isEmptyObj = obj => {
 	}
 	return 1;
 };
+
+/** 获取随机数 */
 export const getRandom = (min, max) => {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -176,3 +178,5 @@ export function exitFullscreen() {
 		de.msExitFullscreen();
 	}
 }
+
+/** 获取随机数 */

@@ -82,7 +82,7 @@ ol {
 /* 路由动画 */
 .child-view {
   position: absolute;
-  width:100%;
+  width: 100%;
   /* overflow: hidden; */
   transition: all .8s cubic-bezier(.55, 0, .1, 1);
 }
@@ -92,8 +92,35 @@ ol {
   opacity: 0;
   transform: translateX(50px)
 }
+
 /* 进入 */
 .slide-fade-enter-from {
   opacity: 0;
   transform: translateX(-50px)
+}
+
+
+.fade-enter {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.fade-leave-to{
+  opacity: 0;
+  transform: translateX(50px)
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    /* transition: all 1s; */
+    transition: all .8s cubic-bezier(.55, 0, .1, 1);
+}
+
+
+@media screen and (max-width : 500px) {
+
+  /* 轮播图高度调整 */
+  .discovery-container .el-carousel__container {
+    height: 150px;
+  }
 }

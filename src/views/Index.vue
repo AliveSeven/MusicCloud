@@ -47,7 +47,7 @@
 
     <div class="main">
       <div class="container">
-          <transition name="slide-fade">
+          <transition name="fade" mode='out-in'>
             <!-- 设置路由出口 -->
             <!-- 给router-view加个唯一的key，来保证路由切换时都会重新渲染触发钩子了 -->
             <router-view :key="key" ></router-view>

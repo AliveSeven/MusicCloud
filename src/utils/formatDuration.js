@@ -12,8 +12,9 @@ export function formatDuration(time){
     s = s < 10 ? '0' + s : s;
     return m + ':' + s;
 }
+
 export default{
-    install(Vue){
-      Vue.filter('formatDuration',formatDuration)
-    }
+  install(Vue){
+    Vue.filter('formatDuration',formatDuration)
   }
+}

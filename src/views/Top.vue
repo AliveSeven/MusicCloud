@@ -146,9 +146,9 @@
 
 <script>
 import { searchHintAPI,searchSuggestAPI,hotSearchAPI } from '@/utils/api'
-import { getBgAPI } from '@/utils/api_2'
 import { mapState } from 'vuex'
 import NavPhone from '@/components/Content/NavPhone';
+// import { getBgAPI } from '@/utils/api_2'
 export default {
   name: "Top",
   /* 子组件 */
@@ -215,16 +215,16 @@ export default {
     },
 
     // 改变背景
-    changeBg(){
-        getBgAPI()
-        .then(res => {
-          console.log('改变背景',res)
-          this.bg = res.data.pic
-          let style = document.createElement(`style`)
-          let text = document.createTextNode(`body::after{background-image: url(${this.bg});}`);    // 添加伪类样式
-          style.appendChild(text)
-          document.body.appendChild(style)})
-    },
+    // changeBg(){
+    //     getBgAPI()
+    //     .then(res => {
+    //       console.log('改变背景',res)
+    //       this.bg = res.data.pic
+    //       let style = document.createElement(`style`)
+    //       let text = document.createTextNode(`body::after{background-image: url(${this.bg});}`);    // 添加伪类样式
+    //       style.appendChild(text)
+    //       document.body.appendChild(style)})
+    // },
 
     // 展开、关闭移动端导航栏
     changeNavPhone(){

@@ -191,7 +191,7 @@ import { getSongUrlAPI, checkMusicAPI, lyricAPI , likeNowSongAPI, getLikSongList
 /* 格式化时间 */
 import { formatDuration } from '../utils/formatDuration'
 /* 随机播放获取随机数 */
-import { getRandom } from '../utils/getRandom'
+import { getRandom } from '../utils/utils.js'
 /* vuex */
 import { mapGetters , mapState } from "vuex";
 /* 子组件 */
