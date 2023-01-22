@@ -193,3 +193,146 @@ export default {
   },
 };
 </script>
+
+<style lang="less" scoped>
+ /* 调整整合songs-container外边距和高度 */
+ .songs-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 35px 100px;
+
+    .tab-bar {
+      display: flex;
+      margin: 20px 0px;
+
+      .item {
+        font-size: 15px;
+        color: gray;
+        margin-right: 20px;
+        cursor: pointer;
+        padding: 5px 20px;
+        text-align: center;
+
+        &.active {
+          color: black;
+          background-color: #fcf6f5;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    .img-wrap {
+      position: relative;
+      width: 70px;
+      height: 70px;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+      }
+
+      .icon-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        color: #ee0000;
+        font-size: 12px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.8);
+
+        &::before{
+          transform: translateX(1px);
+        }
+      }
+    }
+
+    .song-wrap{
+
+      >span {
+        margin-top: 20px;
+        display: inline-block;
+        color: #bebebe;
+      }
+
+      .icon-mv {
+        padding-left: 5px;
+        color: #ee0000;
+      }
+    }
+
+    .song-page{
+      padding: 10px 0;
+    }
+
+    .name-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+
+      span{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    .td-title{
+      text-align: center;
+    }
+
+    .th-title{
+      padding-bottom: 15px;
+
+      &:nth-last-child(1){
+        padding: 0 0px 15px 5px;
+      }
+    }
+}
+
+@media screen and (max-width : 500px) {
+  .songs-container {
+    margin: 0;
+  }
+
+  .songs-container .tab-bar .item{
+    margin: 0;
+  }
+
+  .songs-container .td-title .td-wrap{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+  }
+
+  .songs-container .td-title .td-wrap:nth-last-child(1){
+    padding-left: 5px;
+  }
+
+  .el-table td:first-child{
+    padding: 0;
+  }
+
+  .el-table .song-wrap .icon-mv{
+    display: none;
+  }
+
+  .el-table .img-wrap{
+    width: 100%;
+  }
+}
+</style>

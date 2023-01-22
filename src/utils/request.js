@@ -7,8 +7,8 @@ import NProgress from 'nprogress'
 // let baseURL = "https://music-cloud-fpgfem8aa-aliveleqi.vercel.app/"
 // let baseURL = "http://124.223.89.194:3000/"
 // let baseURL = "http://localhost:3000"
-let baseURL = "https://lianghj.top:3000"
-// let baseURL = "https://autumnfish.cn/"
+// let baseURL = "https://lianghj.top:3000"
+let baseURL = "https://autumnfish.cn/"
 // let baseURL = 'http://duoduozuikeail.top:3000'
 // let baseURL = 'https://netease-cloud-music-api-six-rust.vercel.app/'
 

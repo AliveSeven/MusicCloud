@@ -122,6 +122,10 @@ export default {
       transition: .3s;
       overflow: hidden;
 
+      @media screen and (max-width : 500px){
+        display: none;
+      }
+
       &:hover{
         min-width: 210px;
 
@@ -188,10 +192,7 @@ export default {
 }
 
 @media screen and (max-width : 500px) {
-  .nav{
-    display: none;
-  }
-
+  
   .index-contain .main .container{
     min-width: 0px;
   }

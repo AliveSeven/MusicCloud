@@ -342,5 +342,42 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+/* 调整最外边的盒子的长宽，外边距 */
+.playlist-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 35px 100px;
+
+  .top-wrap {
+    display: flex;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 16px;
+    }
+
+    .img-wrap {
+      margin-right: 30px;
+
+      img {
+        width: 230px;
+        height: 230px;
+      }
+    }
+
+    .info-wrap{
+      p {
+        font-size: 25px;
+      }
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+}
 </style>

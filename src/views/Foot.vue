@@ -794,10 +794,6 @@ export default {
         .v-progress{
           width: 100%;
           margin: auto 10px;
-
-          .songplaylist{
-            margin-right: 10px;
-          }
         }
       }
     }
@@ -928,6 +924,10 @@ export default {
       font-size: 12px;
   }
 
+}
+
+.songplaylist{
+  margin-right: 10px;
 }
 
 </style>

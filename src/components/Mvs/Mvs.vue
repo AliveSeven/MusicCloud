@@ -284,5 +284,163 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+.mvs-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 35px 100px;
+
+  .filter-wrap .wrap-container>div{
+    margin-bottom: 30px;
+    vertical-align: baseline;
+    /* 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。  */
+    display: flex;
+    /* 弹性布局,横着放 */
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      height: 100%;
+
+      &.title {
+        margin: 20px;
+        color: gray;
+        cursor: pointer;
+        padding: 5px 20px;
+
+        &.active {
+          color: black;
+          background-color: #fcf6f5;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    ul{
+      display: flex;
+
+      li:not(:last-child){
+        border-right: 1px solid #f2f2f1;
+      }
+    }
+  }
+
+  .mvs .items{
+    display: flex;
+    /* 让items盒子里面的元素横着排,弹性布局 */
+    justify-content: flex-start;
+    /* 从行首起始位置开始排列 */
+    flex-wrap: wrap;
+    /* 让弹性盒元素在必要的时候拆行 */
+
+    .item{
+      width: 250px;
+      /* 调整item黑子大小 */
+      cursor: pointer;
+      /* 鼠标经过盒子处变成一只手 */
+      margin-right: 25px;
+      /* 外边距调整 */
+      margin-bottom: 30px;
+
+      .img-wrap{
+        width: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+
+        .iconplay{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          /* 设为居中 */
+          width: 40px;
+          height: 40px;
+          color: #dd6d60;
+          font-size: 20px;
+          /* 文字大小 */
+          border-radius: 50%;
+          /* 描边 */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-left: 5px;
+          /* 横轴纵轴居中 */
+          background: rgba(255, 255, 255, 0.8);
+          opacity: 0;
+        }
+
+        &:hover{
+          .iconplay{
+            opacity: 1;
+          }
+        }
+
+        .num-wrap {
+          position: absolute;
+          color: white;
+          top: 0;
+          /* 最上边 */
+          right: 0;
+          /* 最右边 */
+          display: flex;
+          /* 弹性布局 */
+          align-content: center;
+          font-size: 15px;
+          padding-right: 5px;
+          padding-top: 2px;
+
+          .icon-play {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .info-wrap{
+        .name {
+          font-size: 15px;
+        }
+
+        .singer {
+          font-size: 14px;
+          color: darkcyan;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 500px){
+  .mvs-container{
+    margin: 20px 0;
+  }
+
+  .mvs-container .filter-wrap{
+    display: flex;
+    justify-content: center;
+  }
+
+  .mvs-container .filter-wrap .wrap-container>div span.title{
+    margin: 5px;
+    padding: 3px 3px;
+  }
+
+  .mvs-container .mvs .items {
+    justify-content: center;
+  }
+
+  .mvs-container .mvs .items .item{
+    width: 130px;
+  }
+
+}
+
 </style>
