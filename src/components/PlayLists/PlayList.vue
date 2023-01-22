@@ -377,7 +377,263 @@ export default {
         margin-bottom: 20px;
       }
 
+      .author-wrap {
+        display: flex;
+        align-items: center;
+        /* 侧轴子元素居中 */
+        margin-bottom: 20px;
+
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+
+        .name {
+          margin: 0 5px;
+        }
+
+        .time {
+          font-size: 14px;
+        }
+
+      }
+
+      .play-wrap {
+        width: 130px;
+        height: 35px;
+        cursor: pointer;
+        border-radius: 4px;
+        /* 从左侧开始的线性渐变，颜色变化由#e85e4d到#c6483c */
+        background: linear-gradient(to right, #e85e4d, #c6483c);
+        display: flex;
+        align-items: center;
+        /* 侧轴居中 */
+        justify-content: space-around;
+        /* 在弹性盒对象的 <div> 元素中的各项周围留有空白：    */
+        margin-bottom: 25px;
+        user-select: none;
+        /* 文字不给被选中 */
+
+        span {
+          color: white;
+
+          &.iconfont {
+            margin-right: 8px;
+          }
+
+          &.text {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .tag-wrap {
+        display: flex;
+        margin-bottom: 15px;
+
+        span {
+          margin: 0;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+        }
+
+        li {
+          font-size: 15px;
+
+          &:not(:last-child)::after {
+            content: '/';
+            margin: 0 4px;
+          }
+        }
+      }
+
+      .desc-wrap span:last-child {
+        font-size: 15px;
+      }
+
+      span:first-child {
+        margin-right: 10px;
+      }
     }
+  }
+
+  .td-title{
+    text-align: center;
+  }
+
+  .comment-wrap {
+    margin-bottom: 70px;
+
+    .title {
+      font-size: 20px;
+    }
+    
+    .number {
+      color: black;
+      font-size: 18px;
+    }
+
+    .item {
+      display: flex;
+      padding-top: 20px;
+
+      .icon-wrap {
+        margin-right: 15px;
+        
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+
+      }
+
+      &:not(:last-child) .content-wrap {
+        border-bottom: 1px solid #f2f2f1;
+      }
+
+      .date {
+        color: #bebebe;
+        font-size: 14px;
+      }
+
+      .content-wrap {
+        padding-bottom: 20px;
+        flex: 1;
+
+        .name {
+          color: #517eaf;
+          font-size: 14px;
+        }
+
+        .comment {
+          font-size: 14px;
+        }
+
+        .content{
+          margin-bottom: 10px;
+        }
+
+        .re-content{
+          margin-bottom: 10px;
+          padding: 10px;
+          background-color: #e6e5e6;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.icon-zan {
+  color: grey;
+  /* 元素右浮动 */
+  float: right;
+}
+
+.add-music {
+  color: #ee0000;
+  margin-left: 4px;
+}
+
+.playlist-container .playlist-table{
+  user-select: none;
+  /* 文字不给被选中 */
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width : 500px) {
+  .playlist-container{
+    margin: 20px 0;
+  }
+
+  .playlist-container .comment-wrap{
+    margin-bottom: 20px;
+  }
+
+  .playlist-container .top-wrap .img-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .playlist-container .top-wrap .img-wrap img{
+    width: 130px;
+    height: 130px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .author-wrap img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .title{
+    font-size: 14px;
+  }
+
+  .playlist-container .top-wrap span{
+    font-size: 8px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .author-wrap .time{
+    font-size: 8px;
+  }
+
+  .playlist-container .top-wrap .info-wrap span:first-child{
+    font-size: 10px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .tag-wrap li{
+    font-size: 10px;
+  }
+
+  .playlist-container .top-wrap .info-wrap .play-wrap{
+    display: none;
+  }
+
+  .playlist-container .top-wrap .info-wrap .desc-wrap span:last-child{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 10px;
+  }
+
+  .song-wrap .name-wrap .item{
+    display: none;
+  }
+
+  .song-wrap .name-wrap span{
+    font-size: 12px;
+  }
+
+  .playlist-container .td-title .td-wrap{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 12px;
+  }
+
+  .playlist-container .td-title .td-wrap:nth-last-child(1){
+    padding-left: 5px;
+  }
+
+  .playlist-container .el-table th:nth-last-child(1){
+    padding-left: 5px;
+  }
+  
+}
+
+@media screen and (max-width : 360px){
+  .playlist-container .td-title .td-wrap:nth-last-child(1){
+    padding-left: 0px;
   }
 }
 </style>
