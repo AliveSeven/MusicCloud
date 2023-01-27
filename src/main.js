@@ -20,11 +20,9 @@ router.afterEach((to, from, next) => {
 
 // css全局导入
 import './css/ele.css'
-import './css/result.css'
 import './css/leaderboard.css'
 import './css/artists.css'
 import './css/artist.css'
-import './css/login.css'
 import "./assets/style/index.css"
 import "./assets/icon/iconfont.css"
 import './assets/iconfont/colorfont.css'

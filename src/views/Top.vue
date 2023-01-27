@@ -148,7 +148,6 @@
 import { searchHintAPI,searchSuggestAPI,hotSearchAPI } from '@/utils/api'
 import { mapState } from 'vuex'
 import NavPhone from '@/components/Content/NavPhone';
-// import { getBgAPI } from '@/utils/api_2'
 export default {
   name: "Top",
   /* 子组件 */
@@ -567,7 +566,7 @@ export default {
 }
 
 @media screen and (max-width : 980px) {
-    .sliderBar{
+    .header .sliderBar{
         display: none;
     }
 
@@ -576,7 +575,7 @@ export default {
         margin-left: 30px;
     }
 
-    .search-hot {
+    .header .search-hot {
         width: 300px;
         height: 300px;
         /* border: 1px solid #333; */
@@ -590,7 +589,7 @@ export default {
         margin-left: 30px;
     }
 
-    #btbg{
+    .header #btbg{
         display: none;
     }
   
@@ -617,8 +616,8 @@ export default {
         margin-left: 10px;
     }
 
-    .search-hot {
-        width: 200px;
+    .header .search-hot {
+        width: 220px;
         height: 300px;
         /* border: 1px solid #333; */
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
@@ -631,24 +630,24 @@ export default {
         margin-left: 10px;
     }
 
-    .hot-index {
+    .header .hot-index {
         font-size: 12px;
         color: rgb(236, 65, 65);
         margin-right: 15px;
     }
 
-    .hot-name {
+    .header .hot-name {
         font-size: 10px;
         margin-right: 15px;
         color: #000;
         width: 100px;
     }
     
-    .hot-score{
+    .header .hot-score{
         display: none;
     }
 
-    .hot-content{
+    .header .hot-content{
         font-size: 8px;
     }
 

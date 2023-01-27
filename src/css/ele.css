@@ -54,6 +54,10 @@
     width: 200px;
 }
 
+.el-table th:nth-child(4) {
+    width: 150px;
+}
+
 .el-table .song-wrap>span {
     margin-top: 20px;
     display: inline-block;

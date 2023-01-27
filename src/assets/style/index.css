@@ -99,7 +99,6 @@ ol {
   transform: translateX(-50px)
 }
 
-
 .fade-enter {
     opacity: 0;
     transform: translateX(-50px);
@@ -116,7 +115,6 @@ ol {
     transition: all .8s cubic-bezier(.55, 0, .1, 1);
 }
 
-
 @media screen and (max-width : 500px) {
 
   /* 轮播图高度调整 */
@@ -126,3 +124,21 @@ ol {
   
 }
 
+/* 表头文字大小改改 */
+.result-container .el-tabs__item {
+  font-size: 18px;
+}
+
+.result-container .el-table td,
+.result-container .el-table th.is-leaf {
+  border-bottom: none;
+}
+
+.result-container .el-table{
+  /* 文字不给被选中 */
+  user-select: none;
+}
+
+.result-container .el-table__row{
+  height: 50px;
+}

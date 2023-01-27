@@ -298,3 +298,195 @@ export default {
 
 </script>
 
+<style lang="less" scoped>
+.result-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 35px 100px;
+
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .title {
+        margin-right: 10px;
+      }
+
+      .sub-title {
+        font-size: 15px;
+        color: #bebebe;
+      }
+
+    }
+    
+    .items {
+      display: flex;  /* 水平放置item */
+      flex-wrap: wrap;  /* 必要时换行 */
+      justify-content: flex-start;    
+
+      .item {
+        width: 200px;    /* 调整图片大小 */
+        cursor: pointer;  /* 游标变成一只手 */
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        .img-wrap {
+          width: 100%;  /* 图片占满 */
+          position: relative;
+
+          >.icon-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;  
+            transform: translate(-50%, -50%); /* 设为居中 */
+            width: 40px;
+            height: 40px;
+            color: #dd6d60;
+            font-size: 20px;    /* 文字大小 */
+            border-radius: 50%;   /* 描边 */
+            display: flex;  
+            align-items: center;
+            justify-content: center;   /* 横轴纵轴居中 */
+            background: rgba(255, 255, 255, 0.8);
+            opacity: 0;
+          }
+
+          &:hover>.icon-play {
+            opacity: 1;
+          }
+
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+
+          .num-wrap {
+            position: absolute;
+            color: white;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            padding-right: 5px;
+            padding-top: 2px;
+
+            .icon-play {
+              font-size: 12px;
+              display: flex;
+              align-items: center;
+              margin-right: 5px;
+            }
+          }
+
+          .time {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: white;
+            font-size: 15px;
+          }
+
+        }
+
+        .name {
+          font-size: 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+
+        .singer {
+          font-size: 14px;
+          color: #c5c5c5;
+        }
+      }
+
+      .mv .item {
+        width: 250px;
+      }
+
+    }
+
+    .name-wrap{
+      font-size: 15px;
+      width: 75%;
+
+      .first-title{
+        text-align: left;
+      }
+    }
+
+    .song-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .second-title{
+        overflow: hidden;
+        display: -webkit-box; 
+        -webkit-box-orient : vertical;
+        -webkit-line-clamp: 1; /*  最多1行 */
+        text-overflow: ellipsis;  /* 多余的文字显示为省略号 */
+        font-size: 5px;
+        color: #888482;
+        text-align: left;
+      }
+    }
+}
+
+@media screen and (max-width : 500px){
+    .result-container{
+        margin: 20px 0;
+    }
+
+    .result-container .name-wrap .first-title{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        font-size: 12px;
+    }
+
+    .result-container .td-title .td-wrap{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        font-size: 12px;
+    }
+
+    .result-container .td-title .td-wrap:nth-last-child(1){
+        padding-left: 5px;
+    }
+
+    .result-container .el-table th:nth-last-child(1){
+        padding-left: 5px;
+    }
+    .result-container .items{
+        justify-content: center;
+    }
+
+    .result-container .items .item{
+        width: 120px;
+        margin: 20px;
+    }
+
+}
+
+@media screen and (max-width : 380px){
+    .result-container .items .item{
+        margin: 10px;
+    }
+}
+
+
+</style>
+
