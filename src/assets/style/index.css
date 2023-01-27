@@ -142,3 +142,7 @@ ol {
 .result-container .el-table__row{
   height: 50px;
 }
+
+.artist-container .el-table__row{
+  height: 50px;
+}

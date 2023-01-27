@@ -150,6 +150,119 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+.artists-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 35px 50px;
+
+    .filter-wrap{
+        .wrap-container{
+            &>div{
+                margin-bottom: 30px;
+                vertical-align: baseline; /* 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。  */
+                display: flex; /* 弹性布局,横着放 */
+                align-items: center;
+
+                span{
+                    font-size: 14px;
+                    height: 100%;
+
+                    &.title{
+                        margin: 20px;
+                        color: gray;
+                        cursor: pointer;
+                        padding: 5px 20px;
+
+                        &.active{
+                            color: black;
+                            background-color: #fcf6f5;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+
+                ul{
+                    display: flex;
+
+                    /* 除了最后一个元素外,其他元素在其右边加上一条solid(实心)边框 */
+                    li:not(:last-child) {
+                        border-right: 1px solid #f2f2f1;
+                    }
+                }
+            }
+        }
+    }
+
+    .artists{
+        display: flex;
+        flex-wrap: wrap;
+
+        .artists-wrap{
+            margin: 10px 20px;
+
+            .img-wrap{
+                width: 200px;
+                position: relative;
+                cursor: pointer;
+
+                img{
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 50%;
+                    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .3);
+                }
+
+                &:hover img{
+                    transform: scale(1.1);
+                }
+            }
+
+            .name{
+                text-align: center;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .artists-container{
+        margin: 20px 0;
+    }
+
+    .artists-container .filter-wrap{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .artists-container .filter-wrap .wrap-container > div span.title{
+        margin: 7px;
+        padding: 2px;
+    }
+
+    .artists-container .artists{
+        justify-content: center;
+    }
+
+    .artists-container .artists .artists-wrap .img-wrap{
+        width: 120px;
+    }
+
+    .artists-container .artists .artists-wrap .name{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width : 360px){
+    .artists-container .artists .artists-wrap .img-wrap{
+        width: 110px;
+    }
+}
 
 </style>

@@ -19,8 +19,7 @@ router.afterEach((to, from, next) => {
 });
 
 // css全局导入
-import './css/artists.css'
-import './css/artist.css'
+// import './css/artists.css'
 import './assets/style/ele.css'
 import "./assets/style/index.css"
 import "./assets/icon/iconfont.css"

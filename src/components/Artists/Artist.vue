@@ -168,6 +168,135 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+.artist-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 35px 50px;
 
+    .artist-wrap{
+        display: flex;
+
+        .img-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+
+            img{
+                width: 230px;
+                height: 230px;
+            }
+        }
+
+        .artist-info{
+            >div{
+                margin-top: 20px;
+            }
+
+            .author-wrap .alias-wrap{
+                display: flex;
+                margin-top: 10px;
+            }
+
+            .alias-wrap span:not(:last-child){
+                margin-right: 10px;
+            }
+
+            .creation-wrap span:not(:last-child){
+                margin-right: 10px;
+            }
+
+            .desc-wrap p{
+                font-size: 15px;
+                color:darkslategray;
+                /* 调整一下字间距 */
+                letter-spacing : 1px;
+            }
+        }
+    }
+
+    .name-wrap{
+        font-size: 15px;
+        width: 75%;
+
+        .first-title{
+            text-align: left;
+        }
+    }
+    
+    .el-table{
+        .song-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .second-title{
+                overflow: hidden;
+                display: -webkit-box; 
+                -webkit-box-orient : vertical;
+                -webkit-line-clamp: 1; /*  最多1行 */
+                text-overflow: ellipsis;  /* 多余的文字显示为省略号 */
+                font-size: 5px;
+                color: #888482;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 500px){
+    .artist-container{
+        margin: 0;
+    }
+
+    .artist-container .artist-wrap .img-wrap img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .artist-container .artist-wrap .artist-info > div span{
+        font-size: 12px;
+    }
+
+    .artist-container .artist-info .desc-wrap{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+    }
+
+    .artist-container .artist-info .desc-wrap p{
+        font-size: 12px;
+    }
+
+    .artist-container .td-title .td-wrap{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        font-size: 12px;
+    }
+
+    .artist-container .td-title .td-wrap:nth-last-child(1){
+        padding-left: 5px;
+      }
+    
+    .artist-container .el-table th:nth-last-child(1){
+      padding-left: 5px;
+    }
+
+    .artist-container .name-wrap .first-title{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 </style>
