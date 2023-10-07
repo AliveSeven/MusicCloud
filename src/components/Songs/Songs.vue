@@ -31,7 +31,7 @@
         <th class="th-title">时长</th>
       </thead>
       <tbody class="table-body">
-        <tr v-for="(item, index) in lists" :key="index" class="el-table__row" @dblclick="PlayMusic(item)">
+        <tr style="cursor: pointer;" v-for="(item, index) in lists" :key="index" class="el-table__row" @dblclick="PlayMusic(item)">
           <!-- td 元素定义表格单元 -->
           <td>{{ index + 1 }}</td>
           <td>

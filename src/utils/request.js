@@ -8,12 +8,12 @@ import NProgress from 'nprogress'
 // let baseURL = "http://124.223.89.194:3000/"
 // let baseURL = "http://localhost:3000"
 // let baseURL = "https://lianghj.top:3000"
-let baseURL = "https://autumnfish.cn/"
+// let baseURL = "https://autumnfish.cn/"
 // let baseURL = 'http://duoduozuikeail.top:3000'
 // let baseURL = 'https://netease-cloud-music-api-six-rust.vercel.app/'
 
 // let baseURL = 'https://www.codeman.ink/api/'
-// let baseURL = 'https://music.cyrilstudio.top/'
+let baseURL = 'https://api.music.areschang.top/'
 // let baseURL = "https://netease-cloud-music-api-six-rust.vercel.app"
 
 const service = axios.create({
